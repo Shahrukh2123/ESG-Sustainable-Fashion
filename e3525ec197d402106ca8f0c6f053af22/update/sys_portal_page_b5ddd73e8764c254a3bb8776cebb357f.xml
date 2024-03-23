@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update node_type="sys_portal_page" unload_date="2024-03-23 10:52:55">
+    <sys_portal_page action="INSERT_OR_UPDATE">
+        <layout/>
+        <order/>
+        <read_roles>snc_internal</read_roles>
+        <roles/>
+        <selectable>false</selectable>
+        <sys_class_name>sys_portal_page</sys_class_name>
+        <sys_created_by>703318399</sys_created_by>
+        <sys_created_on>2024-02-28 06:11:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b5ddd73e8764c254a3bb8776cebb357f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PA ESG Sustainable Fash - New Tab</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
+        <sys_update_name>sys_portal_page_b5ddd73e8764c254a3bb8776cebb357f</sys_update_name>
+        <sys_updated_by>703318399</sys_updated_by>
+        <sys_updated_on>2024-02-28 06:11:37</sys_updated_on>
+        <title>PA ESG Sustainable Fash - New Tab</title>
+        <user/>
+        <view>pa_esg_sustainable_fash_-_new_tab</view>
+        <related_items_node>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA ESG Sustainable Fash - New Tab">b5ddd73e8764c254a3bb8776cebb357f</page>
+                <summary>User Activity (No of Sellers)</summary>
+                <sys_created_by>703318399</sys_created_by>
+                <sys_created_on>2024-02-28 08:36:46</sys_created_on>
+                <sys_id>501ffbb687a44654a3bb8776cebb35d9</sys_id>
+                <sys_mod_count>1</sys_mod_count>
+                <sys_updated_by>703318399</sys_updated_by>
+                <sys_updated_on>2024-02-28 08:36:46</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_real_time</name>
+                        <portal_section display_value="Created 2024-02-28 02:06:46 PM">501ffbb687a44654a3bb8776cebb35d9</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 08:36:46</sys_created_on>
+                        <sys_id>181ffbb687a44654a3bb8776cebb35da</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 08:36:46</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2024-02-28 02:06:46 PM">501ffbb687a44654a3bb8776cebb35d9</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 08:36:46</sys_created_on>
+                        <sys_id>501ffbb687a44654a3bb8776cebb35db</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 08:36:46</sys_updated_on>
+                        <value>User Activity (No of Sellers)</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2024-02-28 02:06:46 PM">501ffbb687a44654a3bb8776cebb35d9</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 08:36:46</sys_created_on>
+                        <sys_id>541ffbb687a44654a3bb8776cebb35da</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 08:36:46</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>is_using_database_view</name>
+                        <portal_section display_value="Created 2024-02-28 02:06:46 PM">501ffbb687a44654a3bb8776cebb35d9</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 08:36:46</sys_created_on>
+                        <sys_id>5c1ffbb687a44654a3bb8776cebb35db</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 08:36:46</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2024-02-28 02:06:46 PM">501ffbb687a44654a3bb8776cebb35d9</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 08:36:46</sys_created_on>
+                        <sys_id>901ffbb687a44654a3bb8776cebb35da</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 08:36:46</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2024-02-28 02:06:46 PM">501ffbb687a44654a3bb8776cebb35d9</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 08:36:46</sys_created_on>
+                        <sys_id>9c1ffbb687a44654a3bb8776cebb35da</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 08:36:46</sys_updated_on>
+                        <value>single_score</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2024-02-28 02:06:46 PM">501ffbb687a44654a3bb8776cebb35d9</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 08:36:46</sys_created_on>
+                        <sys_id>d41ffbb687a44654a3bb8776cebb35d9</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 08:36:46</sys_updated_on>
+                        <value>36fe773687a44654a3bb8776cebb35e7</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2024-02-28 02:06:46 PM">501ffbb687a44654a3bb8776cebb35d9</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 08:36:46</sys_created_on>
+                        <sys_id>d81ffbb687a44654a3bb8776cebb35da</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 08:36:46</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA ESG Sustainable Fash - New Tab">b5ddd73e8764c254a3bb8776cebb357f</page>
+                <summary>User Activity (No of Buyers)</summary>
+                <sys_created_by>703318399</sys_created_by>
+                <sys_created_on>2024-02-28 08:42:43</sys_created_on>
+                <sys_id>5b60000b87e44654a3bb8776cebb356c</sys_id>
+                <sys_mod_count>1</sys_mod_count>
+                <sys_updated_by>703318399</sys_updated_by>
+                <sys_updated_on>2024-02-28 08:42:43</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_real_time</name>
+                        <portal_section display_value="Created 2024-02-28 02:12:43 PM">5b60000b87e44654a3bb8776cebb356c</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 08:42:43</sys_created_on>
+                        <sys_id>1360000b87e44654a3bb8776cebb356e</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 08:42:43</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>is_using_database_view</name>
+                        <portal_section display_value="Created 2024-02-28 02:12:43 PM">5b60000b87e44654a3bb8776cebb356c</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 08:42:43</sys_created_on>
+                        <sys_id>1760000b87e44654a3bb8776cebb356f</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 08:42:43</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2024-02-28 02:12:43 PM">5b60000b87e44654a3bb8776cebb356c</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 08:42:43</sys_created_on>
+                        <sys_id>5b60000b87e44654a3bb8776cebb356e</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 08:42:43</sys_updated_on>
+                        <value>User Activity (No of Buyers)</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2024-02-28 02:12:43 PM">5b60000b87e44654a3bb8776cebb356c</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 08:42:43</sys_created_on>
+                        <sys_id>5f60000b87e44654a3bb8776cebb356d</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 08:42:43</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2024-02-28 02:12:43 PM">5b60000b87e44654a3bb8776cebb356c</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 08:42:43</sys_created_on>
+                        <sys_id>9760000b87e44654a3bb8776cebb356e</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 08:42:43</sys_updated_on>
+                        <value>single_score</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2024-02-28 02:12:43 PM">5b60000b87e44654a3bb8776cebb356c</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 08:42:43</sys_created_on>
+                        <sys_id>9b60000b87e44654a3bb8776cebb356d</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 08:42:43</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2024-02-28 02:12:43 PM">5b60000b87e44654a3bb8776cebb356c</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 08:42:43</sys_created_on>
+                        <sys_id>d360000b87e44654a3bb8776cebb356e</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 08:42:43</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2024-02-28 02:12:43 PM">5b60000b87e44654a3bb8776cebb356c</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 08:42:43</sys_created_on>
+                        <sys_id>df60000b87e44654a3bb8776cebb356c</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 08:42:43</sys_updated_on>
+                        <value>30ffbbbe87a44654a3bb8776cebb3568</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA ESG Sustainable Fash - New Tab">b5ddd73e8764c254a3bb8776cebb357f</page>
+                <summary>ESG Fashion Total No of Product Listed</summary>
+                <sys_created_by>703318399</sys_created_by>
+                <sys_created_on>2024-02-28 06:55:41</sys_created_on>
+                <sys_id>6be7e3ba87e8c254a3bb8776cebb35eb</sys_id>
+                <sys_mod_count>1</sys_mod_count>
+                <sys_updated_by>703318399</sys_updated_by>
+                <sys_updated_on>2024-02-28 06:55:41</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2024-02-28 12:25:41 PM">6be7e3ba87e8c254a3bb8776cebb35eb</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 06:55:41</sys_created_on>
+                        <sys_id>23e7e3ba87e8c254a3bb8776cebb35ed</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 06:55:41</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2024-02-28 12:25:41 PM">6be7e3ba87e8c254a3bb8776cebb35eb</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 06:55:41</sys_created_on>
+                        <sys_id>6fe7e3ba87e8c254a3bb8776cebb35ec</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 06:55:41</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2024-02-28 12:25:41 PM">6be7e3ba87e8c254a3bb8776cebb35eb</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 06:55:41</sys_created_on>
+                        <sys_id>a7e7e3ba87e8c254a3bb8776cebb35ed</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 06:55:41</sys_updated_on>
+                        <value>ESG Fashion Total No of Product Listed</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2024-02-28 12:25:41 PM">6be7e3ba87e8c254a3bb8776cebb35eb</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 06:55:41</sys_created_on>
+                        <sys_id>abe7e3ba87e8c254a3bb8776cebb35ec</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 06:55:41</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2024-02-28 12:25:41 PM">6be7e3ba87e8c254a3bb8776cebb35eb</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 06:55:41</sys_created_on>
+                        <sys_id>e3e7e3ba87e8c254a3bb8776cebb35ed</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 06:55:41</sys_updated_on>
+                        <value>donut</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2024-02-28 12:25:41 PM">6be7e3ba87e8c254a3bb8776cebb35eb</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 06:55:41</sys_created_on>
+                        <sys_id>efe7e3ba87e8c254a3bb8776cebb35eb</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 06:55:41</sys_updated_on>
+                        <value>fcc7ab7687e8c254a3bb8776cebb3575</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA ESG Sustainable Fash - New Tab">b5ddd73e8764c254a3bb8776cebb357f</page>
+                <summary>Total number of products sold</summary>
+                <sys_created_by>703318399</sys_created_by>
+                <sys_created_on>2024-02-28 07:36:03</sys_created_on>
+                <sys_id>ae21f3ba87240654a3bb8776cebb3530</sys_id>
+                <sys_mod_count>1</sys_mod_count>
+                <sys_updated_by>703318399</sys_updated_by>
+                <sys_updated_on>2024-02-28 07:36:03</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2024-02-28 01:06:03 PM">ae21f3ba87240654a3bb8776cebb3530</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 07:36:03</sys_created_on>
+                        <sys_id>2621f3ba87240654a3bb8776cebb3531</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 07:36:03</sys_updated_on>
+                        <value>8e00373687e00654a3bb8776cebb35bf</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2024-02-28 01:06:03 PM">ae21f3ba87240654a3bb8776cebb3530</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 07:36:03</sys_created_on>
+                        <sys_id>3a21f3ba87240654a3bb8776cebb3532</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 07:36:03</sys_updated_on>
+                        <value>donut</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2024-02-28 01:06:03 PM">ae21f3ba87240654a3bb8776cebb3530</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 07:36:03</sys_created_on>
+                        <sys_id>6621f3ba87240654a3bb8776cebb3532</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 07:36:03</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2024-02-28 01:06:03 PM">ae21f3ba87240654a3bb8776cebb3530</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 07:36:03</sys_created_on>
+                        <sys_id>a221f3ba87240654a3bb8776cebb3532</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 07:36:03</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2024-02-28 01:06:03 PM">ae21f3ba87240654a3bb8776cebb3530</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 07:36:03</sys_created_on>
+                        <sys_id>ee21f3ba87240654a3bb8776cebb3531</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 07:36:03</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2024-02-28 01:06:03 PM">ae21f3ba87240654a3bb8776cebb3530</portal_section>
+                        <sys_created_by>703318399</sys_created_by>
+                        <sys_created_on>2024-02-28 07:36:03</sys_created_on>
+                        <sys_id>fa21f3ba87240654a3bb8776cebb3532</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>703318399</sys_updated_by>
+                        <sys_updated_on>2024-02-28 07:36:03</sys_updated_on>
+                        <value>Total number of products sold</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+        </related_items_node>
+    </sys_portal_page>
+</record_update>

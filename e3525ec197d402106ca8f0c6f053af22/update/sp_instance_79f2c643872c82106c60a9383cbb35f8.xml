@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">1e024e4f87e882106c60a9383cbb35fd</sp_column>
+        <sp_widget display_value="Report">e41aa2d29f0222008252baac757fcfce</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>703318399</sys_created_by>
+        <sys_created_on>2024-02-28 18:13:02</sys_created_on>
+        <sys_id>79f2c643872c82106c60a9383cbb35f8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
+        <sys_update_name>sp_instance_79f2c643872c82106c60a9383cbb35f8</sys_update_name>
+        <sys_updated_by>703318399</sys_updated_by>
+        <sys_updated_on>2024-02-28 18:13:21</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"report_id": {
+		"value": "afc0020f87a882106c60a9383cbb3575",
+		"displayValue": "Buyers Feedbacks and  Likes"
+	},
+	"show_title": {
+		"value": "true",
+		"displayValue": "true"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=79f2c643872c82106c60a9383cbb35f8"/>
+</record_update>

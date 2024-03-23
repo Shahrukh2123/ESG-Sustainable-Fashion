@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_dashboards">
+    <pa_dashboards action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <breakdown_source/>
+        <color>#ffffff</color>
+        <disable_multiple_element>false</disable_multiple_element>
+        <group/>
+        <groups/>
+        <is_breakdown>false</is_breakdown>
+        <managed_breakdown/>
+        <managed_publisher/>
+        <name>ESG Sustainable Fashion Admin Dashboard</name>
+        <no_tabs>false</no_tabs>
+        <notification_link_label/>
+        <notification_link_url/>
+        <notification_text/>
+        <order>100</order>
+        <owner display_value="Shahrukh Khan">434415f897fd4950e4def0c3f153af3e</owner>
+        <restrict_to_roles/>
+        <role_override>true</role_override>
+        <roles/>
+        <should_migrate_permissions>false</should_migrate_permissions>
+        <sys_class_name>pa_dashboards</sys_class_name>
+        <sys_created_by>703318399</sys_created_by>
+        <sys_created_on>2024-02-28 06:11:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ccbd573e8764c254a3bb8776cebb3530</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>ESG Sustainable Fashion Admin Dashboard</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
+        <sys_update_name>pa_dashboards_ccbd573e8764c254a3bb8776cebb3530</sys_update_name>
+        <sys_updated_by>703318399</sys_updated_by>
+        <sys_updated_on>2024-02-28 09:30:45</sys_updated_on>
+        <users/>
+        <visible_to>2</visible_to>
+    </pa_dashboards>
+</record_update>

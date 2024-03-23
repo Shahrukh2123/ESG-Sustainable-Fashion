@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+	
+	
+	
+	
+	
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.mainbox {
+    box-shadow: 0 4px 8px 0 grey;
+  margin-bottom:12px;
+}
+.contents{
+    text-align: center;
+    padding: 14px;
+    font-size: 20px; 
+}
+
+strong{
+ color:black; 
+}
+.merchItem{
+     width: 151px;
+    height: auto;
+  cursor:zoom-in;
+    margin-left: 0.2rem; 
+   transition: 0.3s;
+  
+}
+
+.merchItem:focus{
+    transition: -webkit-transform 0.25s ease;
+}
+
+.merchItem:active {
+  -webkit-transform: scale(3);
+}
+.mySlides2 {
+  transition: -webkit-transform 0.25s ease;
+}
+
+.mySlides2:active {
+  -webkit-transform: scale(3);
+}
+
+.owl-item {
+ box-shadow:0 .125rem 0.5rem grey !important; 
+  
+}
+p-3{
+ padding:1rem important;
+  border-radius:.25rem!important;
+}
+.greyish-label{
+  font-size:14px;
+  color:#808080;
+  margin-bottom:20px;
+}
+.label-black-value{ 
+  color:black;
+   font-size:14px;
+    margin-bottom:20px;
+}
+
+//filter items
+.btn-red{
+ width: 9rem;
+    height: 35px; 
+  margin-top:12px;
+}
+.btn-pnk{
+  background-color:#FF555F;
+}
+.text-primmary {
+    font-size: 17px;
+    font-weight: bold;
+    font-family: "Times new Roman";
+    color: #073262;
+}
+
+.kb-star-on {
+  color: #F2C43B !important;
+  text-shadow: $fav-star-outline;
+}
+
+.kb-star-off {
+  color: $fav-star-color-off !important;
+  text-shadow: $fav-star-outline;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>esg_fashion_category_wise_item</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>ESG Fashion Category wise item widget</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	
+		data.publishedItem=[];
+		var category=$sp.getParameter('item_type');
+	var gr=new GlideRecord('x_ggisu_esg_sustan_esg_sustanable_fashion_publisher');
+	gr.addEncodedQuery('state=2^item_type='+category);
+	gr.query();
+	while(gr.next()){
+		var obj={};
+		obj.prodId=gr.getValue('number');
+		obj.sysId=gr.getValue('sys_id');
+		obj.itemname=gr.getValue('item_name');
+		obj.itemprice=gr.getValue('item_price');
+		obj.quantity=gr.getValue('item_quantity');
+		obj.itemtype=gr.getValue('item_type');
+		obj.gender=gr.getValue('gender');
+		obj.itemsysId=gr.getValue('sys_id');
+		obj.itemImage=gr.getValue('item_image');
+		obj.size=gr.getValue('size');
+		obj.color=gr.getValue('item_color');
+		obj.likes=gr.getValue('total_likes');
+		obj.itemImage2=gr.getValue('item_image_2');
+		obj.itemImage3=gr.getValue('item_image_3');
+		obj.itemImage4=gr.getValue('item_image_4');
+		obj.itemImage5=gr.getValue('item_image_5');
+			data.publishedItem.push(obj);
+	}
+	console.log(data.publishedItem);
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>703318399</sys_created_by>
+        <sys_created_on>2024-03-02 05:13:04</sys_created_on>
+        <sys_id>b30dae3f87ec4210a3bb8776cebb35af</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>ESG Fashion Category wise item widget</sys_name>
+        <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
+        <sys_update_name>sp_widget_b30dae3f87ec4210a3bb8776cebb35af</sys_update_name>
+        <sys_updated_by>703318399</sys_updated_by>
+        <sys_updated_on>2024-03-02 05:43:37</sys_updated_on>
+        <template><![CDATA[<div class="col-md-12">
+  <h1 class="text-info text-center">
+    Item By Category
+  </h1>
+</div>
+<br>
+<br>
+<div class="col-md-12"  ng-if="data.publishedItem.length!=0">
+   <div class="col-md-3" style="display:flex;justify-content:space-between;cursor:pointer;" ng-if="!c.filter" ng-repeat="item in c.data.publishedItem">
+    <div class="owl-item active shadow-sm p-3" style="width: 228px;height:431px;padding:2rem;margin-top:17px;cursor;pointer;"><div class="items">
+							<div class="grmProductCard">
+								<div class="gridItem">
+				
+									<div class="gridItemInner">
+										<div class="gridItemImage">
+											
+											<a class="gridItemLink" style="cursor:pointer;" target="_blank">
+												
+													<img class="merchItem" ng-click="enlargeImg(this)" onerror="this.onerror=null;this.srcset='';this.src='https://s7d4.scene7.com/is/image/BIworldwide/no-image-product-card?$GRMProductCard$&amp;fmt=png';" src="https://genpactdevelop.service-now.com/sys_attachment.do?sys_id={{item.itemImage}}">
+													<a class="gridItemLink"  style="cursor:pointer;" target="_blank"  ng-click="c.showImages(item.itemsysId)">
+                            Show More.
+										    	</a>
+											</a>
+										</div>
+                    <br>
+										<div class="merchInfo" style="height: 150px;">
+											<a class="gridItemLink">
+												<a class="description" data-toggle="tooltip" data-placement="bottom" title="" target="blank">{{item.itemname}}</a>
+										
+												<!--<p class="price">
+														<span class="actualPrice">{{item.itemprice}}</span>
+														<span class="mediaName">Points</span>
+													</p>-->
+													<p class="price">
+                             <span class="mediaName"><b>Size:&nbsp;</b></span>
+														<span class="size">{{item.size}}</span>
+													</p>
+                            <p class="price">
+                           	<span class="mediaName"><b>Suitable for:&nbsp;</b></span>
+														<span class="size">{{item.gender}}</span>
+													</p>
+                         <p class="price">
+                           	<span class="mediaName"><b>Color:&nbsp;</b></span>
+														<span class="size">{{item.color}}</span>
+													</p>
+												<p class="productId">
+													Product ID: {{item.prodId}}
+												</p>
+                           <p class="price">
+
+    <a ng-click="c.toggleLike(item.sysId)" id="likeButton" ng-class="{'likeBlueButton': item.likes != 'null' , 'likeGreyButton': item.likes == null,'likeGreyButton': item.likes == '0'}">
+      <i class="fa fa-thumbs-up" style="font-size:24px;"></i>
+    </a> &nbsp;&nbsp;
+         <span class="like-count" id="like-count" style="margin-top: 2rem;" tc="{{item.likes}}">{{item.likes}}</span>&nbsp;                     
+      <a class="comment-button" ng-click="c.insertcomment(item.sysId)" id="commentButton">
+      <i class="fa fa fa-comments-o" style="font-size:24px;color:#FF555F;"></i>
+    </a> 
+                           </p>
+       
+        
+                         <p class="price">
+                           	<a class="btn btn-pnk text-white" target="_blank" ng-click="c.addToWishlist(item)"  href="/esgs_fashion?id=view_publisher_details&itemId={{item.itemsysId}}"><b>Add to wishlist &nbsp;<i class="fa fa-heart"></i></b></a>
+													</p>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+          </div></div>
+    
+    
+  </div>
+      <div class="col-md-3" style="display:flex;justify-content:space-between;cursor:pointer;" ng-if="c.filter==true" ng-repeat="item1 in c.filteredData">
+    <div class="owl-item active shadow-sm p-3" style="width: 228px;height:431px;padding:2rem;margin-top:17px;cursor;pointer;"><div class="items">
+							<div class="grmProductCard">
+								<div class="gridItem">
+				
+									<div class="gridItemInner">
+										
+										 
+								
+										 
+										<div class="gridItemImage">
+											
+											<a class="gridItemLink" style="cursor:pointer;" target="_blank">
+												
+													<img class="merchItem" ng-click="enlargeImg(this)" onerror="this.onerror=null;this.srcset='';this.src='https://s7d4.scene7.com/is/image/BIworldwide/no-image-product-card?$GRMProductCard$&amp;fmt=png';" ng-src="https://genpactdevelop.service-now.com/sys_attachment.do?sys_id={{item1.itemImage}}">
+													<a class="gridItemLink"  style="cursor:pointer;" target="_blank"  ng-click="c.showImages(item1.itemsysId)">
+                            Show More.
+										    	</a>
+											</a>
+										</div>
+                    <br>
+										<div class="merchInfo" style="height: 150px;">
+											<a class="gridItemLink">
+												<a class="description" data-toggle="tooltip" data-placement="bottom" title="" href="/esgs_fashion?id=view_publisher_details&itemId={{item1.itemsysId}}" target="blank">{{item1.itemname}}</a>
+										
+												<!--<p class="price">
+														<span class="actualPrice">{{item.itemprice}}</span>
+														<span class="mediaName">Points</span>
+													</p>-->
+													<p class="price">
+                             <span class="mediaName"><b>Size:&nbsp;</b></span>
+														<span class="size">{{item1.size}}</span>
+													</p>
+                         <p class="price">
+                           	<span class="mediaName"><b>Color:&nbsp;</b></span>
+														<span class="size">{{item1.color}}</span>
+													</p>
+                         <p class="price">
+                           	<span class="mediaName"><b>Suitable for:&nbsp;</b></span>
+														<span class="size">{{item1.gender}}</span>
+													</p>
+												<p class="productId">
+                          <b>Product ID</b>: {{item1.prodId}}
+												</p>
+                             <p class="price">
+
+    <a ng-click="c.toggleLike(item1.sysId)" id="likeButton" ng-class="{'likeBlueButton': item1.likes != 'null' , 'likeGreyButton': item1.likes == null,'likeGreyButton': item1.likes == '0'}">
+      <i class="fa fa-thumbs-up" style="font-size:24px;"></i>
+    </a> &nbsp;&nbsp;
+         <span class="like-count" id="like-count" style="margin-top: 2rem;" tc="{{item1.likes}}">{{item1.likes}}</span>&nbsp;                     
+      <a class="comment-button" ng-click="c.insertcomment(item1.sysId)" id="commentButton">
+      <i class="fa fa fa-comments-o" style="font-size:24px;color:#FF555F;"></i>
+    </a> 
+                           </p>
+                         <p class="price">
+                           	<a class="btn btn-pnk text-white" target="_blank"  href="/esgs_fashion?id=view_publisher_details&itemId={{item1.itemsysId}}"><b>Add to wishlist &nbsp;<i class="fa fa-heart"></i></b></a>
+													</p>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+          </div></div>
+    
+    
+  </div>
+  </div>
+<div class="col-md-12" ng-if="data.publishedItem.length==0">
+  <h4 class="text-center">
+    No Item Found with this category
+  </h4>
+</div>]]></template>
+    </sp_widget>
+</record_update>

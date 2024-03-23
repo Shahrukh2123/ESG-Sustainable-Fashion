@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function(spUtil,$uibModal) {
+  /* widget controller */
+  var c = this;
+	c.dereaseQuantity=function(){
+		console.log(c.quantity);
+		if(c.quantity!=0){
+		c.newquantity=c.quantity--;
+			console.log(c.newquantity);
+		} else{
+			c.newquantity=c.quantity;
+		}
+		
+	}
+		c.increaseQuantity=function(){
+				console.log(c.quantity);
+		if(c.quantity!=0){
+		c.newquantity=c.quantity++;
+			console.log(c.newquantity);
+		} else{
+			c.newquantity=c.quantity++;
+		}
+	}
+	
+	c.addToCart=function(obj){
+		console.log(c.quantity);
+		console.log(obj);
+		obj.quantity=c.quantity;
+	//	spUtil.addInfoMessage('Item added to cart successfully');
+		c.data.cartItem=obj;
+		c.server.update();
+	}
+	c.openCart=function(){
+			c.modalInstance = $uibModal.open({
+                            templateUrl: 'open_cart',
+                            scope: $scope,
+			                       backdrop: 'static'
+                           });
+		
+	}
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.backbutton {
+    background-color:#FF555F;
+  color:#FFF;
+  border:1px solid #FF555F;
+  margin:19px;
+  margin-bottom: 3rem;
+}
+
+.product-container{
+ //#product-detail-container .product-detail-wrapper .detail .product_container {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+   // -ms-flex-direction: row;
+    flex-direction: row;
+    //-ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-top:7rem;
+}
+.productName{
+     margin: 0 0 8px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF555F; 
+  font-family:'Inter';
+  padding-left:13rem;
+  
+}
+.productDesc{
+     margin: 0 0 8px 0;
+    font-size: 17px;
+    font-weight: bold;
+    color: skyblue; 
+  font-family:'Inter';
+  padding-left:13rem;
+  
+}
+.mobile-productHeader{
+ display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0 0 24px 0; 
+}
+.para-break{
+     margin-top: 4px;
+    margin-bottom: 20px;
+    border: 0;
+    border-bottom: 2px solid #DDDDDD; 
+}
+.quantitySelect{
+ padding-left:12rem; 
+}
+.quantityOrdered{
+ display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold; 
+}
+.quantityOrdered{
+     height: 42px;
+    margin: 8px 0;
+    text-align: center;
+    padding: 0;
+    width:4rem;
+  color:#073262;
+    border: 1px solid #000;
+    border-radius: 0;
+}
+.quantity-decrease{
+ border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-right: 0; 
+  padding:11px;
+   color:#073262;
+  border:1px solid black;
+}
+.quantity-increase{
+ border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-right: 0; 
+  padding:11px;
+  color:#073262;
+  border:1px solid black;
+  margin-left:-3px;
+}
+.cartBtn,.checkoutBtn{
+ width:51rem;
+ margin-bottom:12px; 
+}
+.cartBtn:focus{
+  background: #FF555F;
+}
+.checkoutBtn:focus{
+  background: #FF555F;
+}
+
+.checkoutBtn{
+    background: #073262;
+}
+.cartBtn:hover{
+  background: #FF555F;
+}
+
+.checkoutBtn:hover{
+  background: #FF555F;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>ESG Fashion Add to Cart Item Widget</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>ESG Fashion Add to Cart Item Widget</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+  
+	var itemid=$sp.getParameter('sys_id');
+	console.log(itemid);
+		data.cartItem=[];
+	var gr=new GlideRecord('x_ggisu_esg_sustan_esg_sustanable_fashion_publisher');
+	gr.addEncodedQuery('sys_id='+itemid);
+	gr.query();
+	if(gr.next()){
+		var obj={};
+		obj.prodId=gr.getValue('number');
+		obj.itemname=gr.getValue('item_name');
+		obj.itemprice=gr.getValue('item_price');
+		obj.quantity=gr.getValue('item_quantity');
+		obj.itemtype=gr.getDisplayValue('item_type');
+		obj.itemsysId=gr.getValue('sys_id');
+		obj.itemImage=gr.getValue('item_image');
+			obj.publisherOHR=gr.getValue('sys_created_by');
+		obj.size=gr.getValue('size');
+		obj.color=gr.getValue('item_color');
+		data.cartItem.push(obj);
+	}
+	console.log(data.cartItem);
+	
+	if(input){
+	if(input.cartItem.quantity!=0){
+		var atCart=new GlideRecord('x_ggisu_esg_sustan_esg_add_to_cart_bucket_item');
+	   atCart.initialize();
+		atCart.item_name=input.cartItem.itemname;
+		atCart.item_image=input.cartItem.itemImage;
+		atCart.item_price=input.cartItem.itemprice;
+		atCart.buyer_name=gs.getUserID();
+		atCart.quanitity=input.cartItem.quantity;
+		atCart.total_itemprice=input.cartItem.itemprice*input.cartItem.quantity;
+		atCart.insert();
+		gs.addInfoMessage('Item added to cart');
+			return true;
+	}else{
+			gs.addErrorMessage('No Item in the cart, Please add item');
+			return false;
+		}
+	}
+	
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>703318399</sys_created_by>
+        <sys_created_on>2024-02-14 06:04:14</sys_created_on>
+        <sys_id>74d517d6871c42906c60a9383cbb351a</sys_id>
+        <sys_mod_count>163</sys_mod_count>
+        <sys_name>ESG Fashion Add to Cart Item Widget</sys_name>
+        <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
+        <sys_update_name>sp_widget_74d517d6871c42906c60a9383cbb351a</sys_update_name>
+        <sys_updated_by>703318399</sys_updated_by>
+        <sys_updated_on>2024-02-17 08:24:57</sys_updated_on>
+        <template><![CDATA[<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="panel panel-default" style="background-color:white;">
+        <div style="float:left;">
+                 <a class="btn btn-primary backbutton" href="/esgs_fashion"><i class="fa fa-arrow-left" style="color:white;"></i>&nbsp;Back</a>
+         </div>
+      <div class="panel-body">
+        <div class="product-container" ng-repeat="citem in data.cartItem">
+          <img class="product-primary-img" alt="Product Primary Image" width="350px" src="/sys_attachment.do?sys_id={{citem.itemImage}}" onerror="this.onerror=null;this.srcset='';this.src='https://s7d4.scene7.com/is/image/BIworldwide/no-image-product-card?$GRMProductDetail$&amp;fmt=png';">
+           <div class="mobile-productHeader">
+           <h1 class="productName">
+      {{citem.prodId}} : &nbsp; {{citem.itemname}}
+          </h1>
+           <br>
+             <br>
+           <h4 class="productDesc">
+         Color: {{citem.color}} 
+          </h4>
+             <br>
+               <h4 class="productDesc">
+         Size: {{citem.size}} 
+          </h4>
+             <br>
+             <h4 class="productDesc">
+         Type: {{citem.itemtype}} 
+          </h4>
+             <br>
+              <h4 class="productDesc">
+         Quantity: {{citem.quantity}} 
+          </h4>
+              <h4 class="productDesc">
+         Publisher OHR: {{citem.publisherOHR}} 
+          </h4>
+             
+           <!-- <div class="quantitySelect">
+			<label for="quantityOrdered">QUANTITY</label>
+			<div class="quantity-modifiers">
+			<!--	<a class="quantity-decrease quantityChange quantityLess" href="#" tabindex="0" ng-click="c.dereaseQuantity()"> <span>−</span> <span class="sr-only">Minus
+						Item</span>
+				</a>-->
+        <!--<input type="number" min="0" ng-model="c.quantity" class="quantityOrdered" id="quantityOrdered" name="quantity" id="quantity" value="0" min="citem.quantity">-->
+
+			<!--	<a class="quantity-increase quantityChange quantityMore" href="#" tabindex="0" ng-click="c.increaseQuantity()"> <span>+</span> <span class="sr-only">Plus
+						Item</span>
+				</a>-->
+        <br>
+        <br>
+			</div>
+            
+		</div>-->
+             
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script type="text/ng-template" id="open_cart">
+   <div class="panel panel-default">
+   
+   <div class="panel-header">
+   
+   </div>
+    <div class="panel-body">
+   </div>
+</script>]]></template>
+    </sp_widget>
+</record_update>

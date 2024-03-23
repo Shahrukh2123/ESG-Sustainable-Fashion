@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($uibModal,$scope,spModal) {
+  /* widget controller */
+  var c = this;
+	c.filter=false;
+	c.filteredData=[];
+		c.openModal=function(sys_id){
+		c.modalInstance = $uibModal.open({
+                            templateUrl: 'open_box',
+                            scope: $scope,
+			                       backdrop: 'static'
+                        });
+			c.data.sysId=sys_id;
+			c.data.action="getItem Details"
+			c.server.update();
+		}
+		c.close1=function(){
+			c.modalInstance.close();
+	}
+	
+	
+	//RATING
+	c.insertcomment=function(sysId){
+		console.log(sysId);
+		c.data.commentSysId=sysId;
+		c.modalInstance1 = $uibModal.open({
+                            templateUrl: 'open_comment_box',
+                            scope: $scope,
+			                       backdrop: 'static'
+                        });
+		
+	}
+	
+			c.closeSubModal=function(){
+			c.modalInstance1.close();
+	}
+	
+		c.toggleLike=function(sysId){
+		c.data_sysIdLike=sysId;
+		c.server.get({
+         sysIdLike : c.data_sysIdLike,
+          action:"likeNews"
+        }).then(function(responseLike) {
+			spModal.alert('Thanks for your feedback').then(function (answer) {
+            c.simple = answer;
+        });
+				window.location.reload();
+         
+        })
+	}
+	
+	
+	//COMMENTS
+		c.addComment=function(sysId){
+		console.log(sysId)	
+		console.log(c.comment);
+		c.server.get({
+         sysIdComment : sysId,
+			   comment:c.comment,
+          action:"addComments"
+        }).then(function(responseComment) {
+			      spModal.alert('Your Feedback submitted successfully').then(function (answer) {
+           
+        });
+        	c.close1();
+			    c.closeSubModal();
+			window.location.reload();
+        })
+		
+}
+	
+	//SHOW MORE IMAGES
+		c.showImages=function(sysId){
+			c.modalInstance = $uibModal.open({
+                            templateUrl: 'open_images',
+                            scope: $scope,
+			                       backdrop: 'static'
+                        });
+		   c.data.sysId=sysId;
+			c.data.action="showImages"
+		   c.server.update();
+		
+	}
+	
+	//close show more
+	c.closeShowMore=function(){
+		c.modalInstance.close();
+}
+	  
+	
+	// ADD TO WISHLIST FUNCTION
+	c.addToWishlist=function(item){
+		console.log(item);
+		c.data.item=item;
+		c.data.action="addToWishlist"
+		c.server.update();
+	}
+	
+	
+	//FILTER FUNCTIONS
+	
+		c.clearFilter=function(){
+		window.location.reload();
+	}
+	
+	c.applyFilter=function(){
+		c.filter=true;
+		console.log(c.data.size);
+		console.log(c.data.color);
+		console.log(c.data.gender);
+		if(c.data.gender!='' || c.data.size!='' || c.data.color!=''){
+					c.server.get({
+						filter:c.filter,
+					size:c.data.size,	
+			     gender:c.data.gender,
+			     color:c.data.color,
+          action: "applyfilter"
+        }).then(function(response) {
+				c.filteredData=response.data.filterData;
+				
+        });
+}
+	
+		 c.tabName = 'Home';
+  c.selctedTab = function(obj) {
+        if (obj == 'Home') {
+            c.tabName = obj;
+            $('#rl1').addClass('activeTab');
+            $('#rl2').removeClass('activeTab');
+        } else if(obj == 'About') {
+            c.tabName = obj;
+            $('#rl2').addClass('activeTab');
+            $('#rl1').removeClass('activeTab');
+        }
+	}
+};
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.mainbox {
+    box-shadow: 0 4px 8px 0 grey;
+  margin-bottom:12px;
+}
+.contents{
+    text-align: center;
+    padding: 14px;
+    font-size: 20px; 
+}
+.owl-item{
+  width: 228px;
+  height:431px;
+  padding:2rem;
+  margin-top:17px;
+  cursor;pointer;
+}
+
+strong{
+ color:black; 
+}
+.merchItem{
+     width: 151px;
+    height: auto;
+  cursor:zoom-in;
+    margin-left: 0.2rem; 
+   transition: 0.3s;
+  
+}
+
+.merchItem:focus{
+    transition: -webkit-transform 0.25s ease;
+}
+
+.merchItem:active {
+  -webkit-transform: scale(3);
+}
+.mySlides2 {
+  transition: -webkit-transform 0.25s ease;
+}
+
+.mySlides2:active {
+  -webkit-transform: scale(3);
+}
+
+.owl-item {
+ box-shadow:0 .125rem 0.5rem grey !important; 
+  
+}
+p-3{
+ padding:1rem important;
+  border-radius:.25rem!important;
+}
+.greyish-label{
+  font-size:14px;
+  color:#808080;
+  margin-bottom:20px;
+}
+.label-black-value{ 
+  color:black;
+   font-size:14px;
+    margin-bottom:20px;
+}
+
+//filter items
+.btn-red{
+ width: 9rem;
+    height: 35px; 
+  margin-top:12px;
+}
+.btn-pnk{
+  background-color:#FF555F;
+}
+.text-primmary {
+    font-size: 17px;
+    font-weight: bold;
+    font-family: "Times new Roman";
+    color: #073262;
+}
+
+.kb-star-on {
+  color: #F2C43B !important;
+  text-shadow: $fav-star-outline;
+}
+
+.kb-star-off {
+  color: $fav-star-color-off !important;
+  text-shadow: $fav-star-outline;
+}
+@media (min-width: 320px) and (max-width: 387px) {
+  .owl-item{width:199px;margin-left: 9rem;};
+
+}
+
+@media (min-width: 388px) and (max-width: 992px) {
+
+  .owl-item{width:199px;margin-left: 9rem;};
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>esg_fashion_sell_published__item</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>ESG Fashion Sell Published  Item</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	
+	data.publishedItem=[];
+		data.filterData=[];
+	data.ItemDetails=[];
+	data.result=[];
+	data.imgArr=[];
+	
+	var gr=new GlideRecord('x_ggisu_esg_sustan_esg_sustanable_fashion_publisher');
+	gr.addEncodedQuery('state=2');
+	gr.query();
+	while(gr.next()){
+		var obj={};
+		obj.prodId=gr.getValue('number');
+		obj.sysId=gr.getValue('sys_id');
+		obj.itemname=gr.getValue('item_name');
+		obj.itemprice=gr.getValue('item_price');
+		obj.quantity=gr.getValue('item_quantity');
+		obj.itemtype=gr.getValue('item_type');
+		obj.gender=gr.getValue('gender');
+		obj.itemsysId=gr.getValue('sys_id');
+		obj.itemImage=gr.getValue('item_image');
+		obj.size=gr.getValue('size');
+		obj.color=gr.getValue('item_color');
+		obj.likes=gr.getValue('total_likes');
+		obj.itemImage2=gr.getValue('item_image_2');
+		obj.itemImage3=gr.getValue('item_image_3');
+		obj.itemImage4=gr.getValue('item_image_4');
+		obj.itemImage5=gr.getValue('item_image_5');
+			data.publishedItem.push(obj);
+	}
+	console.log(data.publishedItem);
+	
+	if(input && input.action=="getItem Details"){
+		console.log(input.sysId);
+		var gr1=new GlideRecord('x_ggisu_esg_sustan_esg_sustanable_fashion_publisher');
+	gr1.addEncodedQuery('sys_id='+input.sysId);
+	gr1.query();
+	if(gr1.next()){
+		var obj1={};
+		obj1.prodId=gr1.getValue('number');
+		obj1.sysId=gr1.getValue('sys_id');
+		obj1.itemname=gr1.getValue('item_name');
+		obj1.itemprice=gr1.getValue('item_price');
+		obj1.quantity=gr1.getValue('item_quantity');
+		obj1.itemtype=gr1.getValue('item_type');
+		obj1.itemsysId=gr1.getValue('sys_id');
+		obj1.itemImage=gr1.getValue('item_image');
+		obj1.size=gr1.getValue('size');
+		obj1.color=gr1.getValue('item_color');
+		data.ItemDetails.push(obj1);
+		//Gte Publisher details
+		var gr2=new GlideRecord('sys_user');
+	gr2.addEncodedQuery('user_name='+gr1.sys_created_by);
+	gr2.query();
+	if(gr2.next()){
+		var obj2={};
+		obj2.ohr_id=gr2.getValue('user_name');
+		obj2.first_name=gr2.getValue('first_name');
+		obj2.last_name=gr2.getValue('last_name');
+		obj2.location=gr2.getDisplayValue('location');
+		obj2.u_center_of_excellence=gr2.getValue('u_coe');
+		obj2.u_service_delivery_organization=gr2.getValue('u_sdo');
+		obj2.u_band=gr2.getValue('u_band');
+		obj2.u_supervisor=gr2.getDisplayValue('manager');
+		obj2.title=gr2.getDisplayValue('title');
+		obj2.city=gr2.getDisplayValue('city');
+		obj2.email=gr2.getValue('email');
+		obj2.mobile=gr2.getValue('mobile_phone');
+		obj2.u_band=gr2.getValue('u_band');
+		obj2.u_hr_manager=gr2.getDisplayValue('u_hr_manager');
+		obj2.company=gr2.getValue('company');
+		obj2.department=gr2.getDisplayValue('department');
+		obj2.u_legal_entity=gr2.getValue('u_legal_entity');
+		data.result.push(obj2);
+	}
+	console.log(data.result);
+		
+	}
+console.log(data.ItemDetails);
+	}
+	
+		if(input && input.action=="applyfilter"){
+		console.log(input.color);
+			console.log(input.size);
+			var gr3=new GlideRecord('x_ggisu_esg_sustan_esg_sustanable_fashion_publisher');
+		//	gr3.addEncodedQuery('u_location='+input.location);
+		  gr3.addEncodedQuery('gender='+input.gender+'^ORsize='+input.size+'^ORitem_colorSTARTSWITH'+input.color);
+			gr3.addQuery('state','2');
+		 // gr2.addEncodedQuery('u_skillsLIKE'+input.searchText+'^ORu_job_vacancy='+input.searchText);
+	gr3.query();
+	while(gr3.next()){
+		var obj3={};
+		obj3.prodId=gr3.getValue('number');
+		obj3.sysId=gr3.getValue('sys_id');
+		obj3.itemname=gr3.getValue('item_name');
+		obj3.itemprice=gr3.getValue('item_price');
+		obj3.quantity=gr3.getValue('item_quantity');
+		obj3.itemtype=gr3.getValue('item_type');
+		obj3.itemsysId=gr3.getValue('sys_id');
+			obj3.gender=gr3.getValue('gender');
+		obj3.likes=gr.getValue('total_likes');
+		obj3.itemImage=gr3.getValue('item_image');
+		obj3.size=gr3.getValue('size');
+		obj3.color=gr3.getValue('item_color');
+		data.filterData.push(obj3);
+		console.log('Filter'+data.filterData);
+	}
+	}
+	
+		if(input && input.action=="showImages"){
+	var gimg=new GlideRecord('x_ggisu_esg_sustan_esg_sustanable_fashion_publisher');
+	gimg.addEncodedQuery('sys_id='+input.sysId);
+	gimg.query();
+		if(gimg.next()){
+			var imgObj={};
+		imgObj.itemname1=gimg.getValue('item_name');
+		imgObj.itemImage2=gimg.getValue('item_image_2');
+		imgObj.itemImage3=gimg.getValue('item_image_3');
+		imgObj.itemImage4=gimg.getValue('item_image_4');
+		imgObj.itemImage5=gimg.getValue('item_image_5');
+			data.imgArr.push(imgObj);
+		}
+		}
+	
+	  if(input && input.action=="addToWishlist"){
+			
+			var obj5=JSON.stringify(input.item);
+				var aWshlist=new GlideRecord('x_ggisu_esg_sustan_esg_add_to_cart_bucket_item');
+	          aWshlist.addEncodedQuery('aWshlist'+input.item.itemname);
+	          aWshlist.query();
+			if(aWshlist.next()){
+				gs.addInfoMessage('This item is already available');
+				return false;
+			} else{
+				aWshlist.initialize();
+				aWshlist.item_name=input.item.itemname;
+				aWshlist.buyer_name=gs.getUserID();
+				aWshlist.item_image=input.item.itemImage;
+				aWshlist.quanitity=input.item.quantity;
+				aWshlist.item_image=input.item.itemImage;
+				aWshlist.item_image_2=input.item.itemImage2;
+				aWshlist.item_image3=input.item.itemImage3;
+				aWshlist.item_image_4=input.item.itemImage4;
+				aWshlist.item_image_5=input.item.itemImage5;
+				aWshlist.item_color=input.item.color;
+				aWshlist.size=input.item.size;
+				aWshlist.gender=input.item.gender;
+				aWshlist.state='Bought';
+					aWshlist.insert()
+
+			}
+			
+			
+			
+			
+		}
+	
+	//INSERT COMMENT/FEEDBACKS
+			if(input && input.action=="addComments"){
+			console.log(input.commentSysId);
+		 var grComment = new GlideRecord('x_ggisu_esg_sustan_esg_sustanable_fashion_publisher');
+		grComment.addEncodedQuery('sys_id='+input.sysIdComment);
+  grComment.query();
+  if(grComment.next())
+  {
+	grComment.comments=input.comment+',';
+		console.log('COMMENT'+input.comment);
+		grComment.update();
+		gs.addInfoMessage('Your feedback recorded successfully');
+	}
+	}
+	
+	//INSERT LIKE
+		if(input && input.action=="likeNews"){
+		 var grLike = new GlideRecord('x_ggisu_esg_sustan_esg_sustanable_fashion_publisher');
+		grLike.addEncodedQuery('sys_id='+input.sysIdLike);
+  grLike.query();
+  if(grLike.next())
+  {
+	grLike.total_likes=grLike.total_likes+1;
+		grLike.update();
+		gs.addInfoMessage('Your feedback recorded successfully');
+	}
+	}
+	
+
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>703318399</sys_created_by>
+        <sys_created_on>2024-02-13 13:06:40</sys_created_on>
+        <sys_id>2bfca702979c42906ca8f0c6f053af18</sys_id>
+        <sys_mod_count>175</sys_mod_count>
+        <sys_name>ESG Fashion Sell Published  Item</sys_name>
+        <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
+        <sys_update_name>sp_widget_2bfca702979c42906ca8f0c6f053af18</sys_update_name>
+        <sys_updated_by>703318399</sys_updated_by>
+        <sys_updated_on>2024-03-14 12:23:42</sys_updated_on>
+        <template><![CDATA[<head>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<div class="col-md-12 col-sm-12 col-xs-12 col-xxs-12">
+  <h2 class="great-discount's text-info">Check this Out</h2> 
+</div>
+
+<div class="row" style="margin-bottom:12rem;">
+   <div class="col-md-2">
+      <label class="text-primmary">Filters</label>
+      <br>
+      <div class="panel panel-default" style="background-color:#F7F7F7;border-radius:2px;border-color:transparent;width:17rem;box-shadow:0 0.125rem 0.5rem grey !important">
+        <div class="panel-body">
+          <label class="filter-label">Gender</label>
+          <div class="form-group">
+            <select name="gender" id="gender" placeholder="Select Gender" class="form-control" ng-model="c.data.gender" style="margin-left: -8px;min-width: 155px;">
+          <option value="" disabled selected>Select Gender</option>
+            <!--<option value="" ng-model="">--- None ---</option>-->
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="UniSex">Unisex</option>
+         </select>  
+          </div>
+          <label class="filter-label">Size</label>
+          <select name="size" id="size" placeholder="Select Size" class="form-control" ng-model="c.data.size" style="margin-left: -8px;min-width: 155px">
+              <!--<option value="" ng-model="">--- None ---</option>-->
+             <option value="US 38">US 38</option>
+             <option value="US 40">US 40</option>
+             <option value="US 42">US 42</option>
+             <option value="US 46">US 46 </option>
+         <!--<option value="" disabled selected>Select Designation</option>
+            <option value="" ng-model="">--- None ---</option>
+          <option ng-repeat="choices in c.data.designation">{{choices.label}}</option>-->
+         </select>  
+            <label class="filter-label">Color</label>
+          <div class="form-group">
+            <input type="text" class="form-control location" placeholder="Enter Color" ng-model="c.data.color" style="width: 153px;margin-left: -8px;margin-bottom:21rem;">
+          </div>
+        </div>
+        <div class="panel-footer" style="padding:1.4rem;background:#ddd !important;">
+          <div class="text-center">
+           <button class="btn btn-info text-white" style="width:9rem;" ng-click="c.applyFilter()">Apply</button><br/>
+            <button class="btn btn-danger text-white btn-red" ng-click="c.clearFilter()">Clear Filter</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="col-md-10">
+   <div class="col-md-3" style="display:flex;justify-content:space-between;cursor:pointer;" ng-if="!c.filter" ng-repeat="item in c.data.publishedItem">
+    <div class="owl-item active shadow-sm p-3"><div class="items">
+							<div class="grmProductCard">
+								<div class="gridItem">
+				
+									<div class="gridItemInner">
+										<div class="gridItemImage">
+											
+											<a class="gridItemLink" style="cursor:pointer;" target="_blank">
+												
+													<img class="merchItem" ng-click="enlargeImg(this)" onerror="this.onerror=null;this.srcset='';this.src='https://s7d4.scene7.com/is/image/BIworldwide/no-image-product-card?$GRMProductCard$&amp;fmt=png';" src="https://genpactdevelop.service-now.com/sys_attachment.do?sys_id={{item.itemImage}}">
+													<a class="gridItemLink"  style="cursor:pointer;" target="_blank"  ng-click="c.showImages(item.itemsysId)">
+                            Show More.
+										    	</a>
+											</a>
+										</div>
+                    <br>
+										<div class="merchInfo" style="height: 150px;">
+											<a class="gridItemLink">
+												<a class="description" data-toggle="tooltip" data-placement="bottom" title="" target="blank">{{item.itemname}}</a>
+										
+												<!--<p class="price">
+														<span class="actualPrice">{{item.itemprice}}</span>
+														<span class="mediaName">Points</span>
+													</p>-->
+													<p class="price">
+                             <span class="mediaName"><b>Size:&nbsp;</b></span>
+														<span class="size">{{item.size}}</span>
+													</p>
+                            <p class="price">
+                           	<span class="mediaName"><b>Suitable for:&nbsp;</b></span>
+														<span class="size">{{item.gender}}</span>
+													</p>
+                         <p class="price">
+                           	<span class="mediaName"><b>Color:&nbsp;</b></span>
+														<span class="size">{{item.color}}</span>
+													</p>
+												<p class="productId">
+													Product ID: {{item.prodId}}
+												</p>
+                           <p class="price">
+
+    <a ng-click="c.toggleLike(item.sysId)" id="likeButton" ng-class="{'likeBlueButton': item.likes != 'null' , 'likeGreyButton': item.likes == null,'likeGreyButton': item.likes == '0'}">
+      <i class="fa fa-thumbs-up" style="font-size:24px;"></i>
+    </a> &nbsp;&nbsp;
+         <span class="like-count" id="like-count" style="margin-top: 2rem;" tc="{{item.likes}}">{{item.likes}}</span>&nbsp;                     
+      <a class="comment-button" ng-click="c.insertcomment(item.sysId)" id="commentButton">
+      <i class="fa fa fa-comments-o" style="font-size:24px;color:#FF555F;"></i>
+    </a> 
+                           </p>
+       
+        
+                         <p class="price">
+                           	<a class="btn btn-pnk text-white" target="_blank" ng-click="c.addToWishlist(item)"  href="/esgs_fashion?id=view_publisher_details&itemId={{item.itemsysId}}"><b>Add to wishlist &nbsp;<i class="fa fa-heart"></i></b></a>
+													</p>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+          </div></div>
+    
+    
+  </div>
+      <div class="col-md-3" style="display:flex;justify-content:space-between;cursor:pointer;" ng-if="c.filter==true" ng-repeat="item1 in c.filteredData">
+    <div class="owl-item active shadow-sm p-3" style="width: 228px;height:431px;padding:2rem;margin-top:17px;cursor;pointer;"><div class="items">
+							<div class="grmProductCard">
+								<div class="gridItem">
+				
+									<div class="gridItemInner">
+										
+										 
+								
+										 
+										<div class="gridItemImage">
+											
+											<a class="gridItemLink" style="cursor:pointer;" target="_blank">
+												
+													<img class="merchItem" ng-click="enlargeImg(this)" onerror="this.onerror=null;this.srcset='';this.src='https://s7d4.scene7.com/is/image/BIworldwide/no-image-product-card?$GRMProductCard$&amp;fmt=png';" ng-src="https://genpactdevelop.service-now.com/sys_attachment.do?sys_id={{item1.itemImage}}">
+													<a class="gridItemLink"  style="cursor:pointer;" target="_blank"  ng-click="c.showImages(item1.itemsysId)">
+                            Show More.
+										    	</a>
+											</a>
+										</div>
+                    <br>
+										<div class="merchInfo" style="height: 150px;">
+											<a class="gridItemLink">
+												<a class="description" data-toggle="tooltip" data-placement="bottom" title="" href="/esgs_fashion?id=view_publisher_details&itemId={{item1.itemsysId}}" target="blank">{{item1.itemname}}</a>
+										
+												<!--<p class="price">
+														<span class="actualPrice">{{item.itemprice}}</span>
+														<span class="mediaName">Points</span>
+													</p>-->
+													<p class="price">
+                             <span class="mediaName"><b>Size:&nbsp;</b></span>
+														<span class="size">{{item1.size}}</span>
+													</p>
+                         <p class="price">
+                           	<span class="mediaName"><b>Color:&nbsp;</b></span>
+														<span class="size">{{item1.color}}</span>
+													</p>
+                         <p class="price">
+                           	<span class="mediaName"><b>Suitable for:&nbsp;</b></span>
+														<span class="size">{{item1.gender}}</span>
+													</p>
+												<p class="productId">
+                          <b>Product ID</b>: {{item1.prodId}}
+												</p>
+                             <p class="price">
+
+    <a ng-click="c.toggleLike(item1.sysId)" id="likeButton" ng-class="{'likeBlueButton': item1.likes != 'null' , 'likeGreyButton': item1.likes == null,'likeGreyButton': item1.likes == '0'}">
+      <i class="fa fa-thumbs-up" style="font-size:24px;"></i>
+    </a> &nbsp;&nbsp;
+         <span class="like-count" id="like-count" style="margin-top: 2rem;" tc="{{item1.likes}}">{{item1.likes}}</span>&nbsp;                     
+      <a class="comment-button" ng-click="c.insertcomment(item1.sysId)" id="commentButton">
+      <i class="fa fa fa-comments-o" style="font-size:24px;color:#FF555F;"></i>
+    </a> 
+                           </p>
+                         <p class="price">
+                           	<a class="btn btn-pnk text-white" target="_blank"  href="/esgs_fashion?id=view_publisher_details&itemId={{item1.itemsysId}}"><b>Add to wishlist &nbsp;<i class="fa fa-heart"></i></b></a>
+													</p>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+          </div></div>
+    
+    
+  </div>
+  </div>
+</div>
+
+
+<script type="text/ng-template" id="open_comment_box">
+   <div class="panel panel-default">
+   
+   <div class="panel-header">
+   <a type="button" class="btn btn-close" ng-click="c.closeSubModal()" style="float:right;margin-top:15px;font-size: 26px;">×</a>
+   <strong class="text-info" style="margin-top:15px;font-size: 16px;margin-left:24px;">Add your Feedback  <i class="fa fa fa-comments-o" style="font-size:24px;margin-top:19px;margin-right:12px;color:#00AECF;"></i></strong>
+   </div>
+    <div class="panel-body">
+   <div class="form-group">
+   <textarea rows="3" cols="2" class="form-control" ng-model="c.comment" required="true" placeholder="Enter your Feedback here"></textarea>
+   <br>
+   <button class="btn btn-info right"  style="float:right;" ng-click="c.addComment(data.publishedItem[0].sysId)">Add <i class="fa fa fa-comments-o" style="font-size:16px"></i></button>
+   </div>
+   </div>
+</script>
+
+<script type="text/ng-template" id="open_box">
+  <head>
+  <style>
+  .panel{
+     width: 94rem;
+    text-align: center;
+    position: relative;
+    left: -40%; 
+}
+li.active {
+    background: transparent;
+}
+li.hover {
+    background: #DDDDDD;
+}
+
+li.active:after {
+    border-left-color: #555;
+}
+.nav-tabs > li{
+   width: 52rem;
+}
+.nav-tabs > li.acitve{
+   width: 52rem;
+}
+a:focus{
+ background: #073262 !important;
+ color:white !important;
+}
+
+.panel-default{
+ box-shadow:0 0.4rem 0.8rem 0 grey;
+  width:110rem;
+  border-radius:0.7rem;
+  margin-top:-6px;
+  margin-bottom:20px;}
+.nav-tabs > li.active a {
+   text-align: center;
+    width: 52rem;
+    color: #FFF;
+    border: none;
+    font-weight: 600;
+    background: #073262;
+    border-bottom: 2px solid;
+    border-color: white;
+    box-shadow: none;
+}
+.nav-tabs > li a{
+ text-align:center;
+  margin-right:0px !important;
+}
+.greyish-label{
+  font-size:14px;
+  color:#808080;
+  margin-bottom:20px;
+}
+.label-black-value{ 
+  color:black;
+   font-size:14px;
+    margin-bottom:20px;
+}
+
+  </style>
+  </head>
+   <div class="panel panel-default">
+   
+   <div class="panel-header">
+    <a type="button" class="btn btn-close" ng-click="c.close1()" style="float:right;margin-top:15px;font-size: 26px;">×</a>
+   </div>
+    <div class="panel-body">
+     <ul class="nav nav-tabs" style="border-bottom: 1px solid #ddd;margin-bottom: 55px;">
+    <li class="active" id="rl1"><a data-toggle="tab" ng-click="c.selctedTab('Home')">Item Details</a></li>
+    <li id="rl2"><a data-toggle="tab" href="#aboutme" ng-click="c.selctedTab('About')">Publisher Details</a></li>
+    </ul>
+     <div class="tab-content"  ng-show="c.tabName == 'Home'" ng-repeat="details in c.data.ItemDetails">
+       <div class="tab-pane fade in active">
+       <div class="row">
+        <div class="col-md-3 col-xs-6 col-sm-6">
+         <div>
+          <label class="greyish-label">Number</label>
+        </div>
+        <div>
+          <label class="greyish-label">Item Name</label>
+        </div>
+        <div>
+          <label class="greyish-label">Item Price</label>
+        </div>
+        <div>
+          <label class="greyish-label">Item Quantity</label>
+           
+        </div>
+          <div>
+          <label class="greyish-label">Item Type</label>
+        </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <div>
+           <label class="label-black-value">{{details.prodId ?details.prodId : '-'}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.itemname}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.itemprice ?details.itemprice : '-'}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.quantity}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.itemtype}}</label>
+          </div>
+        </div>
+        <div class="col-md-3 col-xs-6 col-sm-6">
+          <div>
+          <label class="greyish-label">Item Size</label>
+        </div>
+          <div>
+          <label class="greyish-label">Item Color</label>
+        </div>
+         <div>
+          <label class="greyish-label">Item Image</label>
+        </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <div>
+           <label class="label-black-value">{{details.size}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.color}}</label>
+          </div>
+          <div>
+           <img class="merchItem" ng-click="enlargeImg(this)" width="150px" src="/sys_attachment.do?sys_id={{details.itemImage}}">
+          </div>
+        </div>
+      </div>
+       </div>
+       </div>
+       <div class="tab-content"  ng-show="c.tabName == 'About'">
+               <div class="tab-pane fade in active">
+               <div class="row" ng-repeat="details in c.data.result">
+        <div class="col-md-3 col-xs-6 col-sm-6">
+         <div>
+          <label class="greyish-label">OHR ID</label>
+        </div>
+        <div>
+          <label class="greyish-label">First Name</label>
+        </div>
+        <div>
+          <label class="greyish-label">Last Name</label>
+        </div>
+        <div>
+          <label class="greyish-label">Location</label>
+           
+        </div>
+          <div>
+          <label class="greyish-label">Band</label>
+              
+        </div>
+          <div>
+          <label class="greyish-label">Supervisor</label>
+        </div>
+          <div>
+          <label class="greyish-label">Supervisor OHR</label>
+        </div>
+          <div>
+          <label class="greyish-label">HR Name</label>
+        </div>
+          <div>
+          <label class="greyish-label">HR OHR</label>
+        </div>
+          
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <div>
+           <label class="label-black-value">{{details.ohr_id ?details.ohr_id : '-'}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.first_name}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.last_name ?details.last_name : '-'}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.location}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.u_band}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.u_supervisor}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.u_supervisor_ohr}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.u_hr_manager}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.u_hr_ohr}}</label>
+          </div>
+        </div>
+        <div class="col-md-3 col-xs-6 col-sm-6">
+          <div>
+          <label class="greyish-label">Personal Email ID</label>
+        </div>
+          <div>
+          <label class="greyish-label">City</label>
+        </div>
+          <div>
+          <label class="greyish-label">Designation</label>
+        </div>
+          <div>
+          <label class="greyish-label">Address</label>
+        </div>
+          <div>
+          <label class="greyish-label">Legal Entity</label>
+        </div>
+          <div>
+          <label class="greyish-label">Department</label>
+        </div>
+           <div>
+          <label class="greyish-label">Mobile Phone</label>
+        </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <div>
+           <label class="label-black-value">{{details.email}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.city}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.title}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.u_address}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.u_legal_entity}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.department}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.mobile}}</label>
+          </div>
+        </div>
+      </div>
+          </div>
+       </div> 
+        
+   </div>
+   </div>
+</script>
+
+<script type="text/ng-template" id="open_images">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+.modal-content{
+    width: 86rem;
+    left: -12rem;
+    height: 35rem;
+}
+.merchItem{
+        width: 17rem;
+    height: auto;
+    cursor: zoom-in;
+    border-radius: 15px;
+    margin-left: 8px;
+    transition: .3s;
+  
+}
+.merchItem:focus{
+    transition: -webkit-transform 0.25s ease;
+}
+
+.merchItem:active {
+  -webkit-transform: scale(3);
+}
+.mySlides2 {
+  transition: -webkit-transform 0.25s ease;
+}
+
+.mySlides2:active {
+  -webkit-transform: scale(3);
+}
+
+  </style>
+  </head>
+  <div class="close-button">
+     <a type="button" class="btn btn-close" ng-click="c.closeShowMore()" style="float:right;margin-top:15px;font-size: 26px;">×</a>
+  </div>
+   <div class="panel panel-default" ng-repeat="item1 in c.data.imgArr" style="margin-top:10rem;">
+  <div class="panel-body">
+  <div style="display:flex;display: flex;justify-content: space-between;width: 82rem;">
+   <div class="col-md-3">
+   <img class="merchItem" ng-click="enlargeImg(this)" src="https://genpactdevelop.service-now.com/sys_attachment.do?sys_id={{item1.itemImage2}}" style="vertical-align: middle;height: 14rem;width: 16rem;">
+   </div>
+    <div class="col-md-3">
+   <img class="merchItem" ng-click="enlargeImg(this)" src="https://genpactdevelop.service-now.com/sys_attachment.do?sys_id={{item1.itemImage3}}" style="vertical-align: middle;height: 14rem;width: 16rem;">
+   </div>
+    <div class="col-md-3">
+   <img class="merchItem" ng-click="enlargeImg(this)" src="https://genpactdevelop.service-now.com/sys_attachment.do?sys_id={{item1.itemImage4}}" style="vertical-align: middle;height: 14rem;width: 16rem;">
+   </div>
+   <div class="col-md-3">
+   <img class="merchItem" ng-click="enlargeImg(this)" src="https://genpactdevelop.service-now.com/sys_attachment.do?sys_id={{item1.itemImage5}}" style="vertical-align: middle;height: 14rem;width: 16rem;">
+   </div>
+   </div>
+  </div>
+   </div>
+</script>
+
+
+
+
+
+]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_tabs">
+    <pa_tabs action="INSERT_OR_UPDATE">
+        <canvas_page display_value="PA ESG Sustainable Fash - New Tab">caddd73e8764c254a3bb8776cebb3580</canvas_page>
+        <name>ESG Sustainable Fash - New Tab</name>
+        <page display_value="PA ESG Sustainable Fash - New Tab">b5ddd73e8764c254a3bb8776cebb357f</page>
+        <sys_class_name>pa_tabs</sys_class_name>
+        <sys_created_by>703318399</sys_created_by>
+        <sys_created_on>2024-02-28 06:11:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0edd9f3e8764c254a3bb8776cebb35da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ESG Sustainable Fash - New Tab</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
+        <sys_update_name>pa_tabs_0edd9f3e8764c254a3bb8776cebb35da</sys_update_name>
+        <sys_updated_by>703318399</sys_updated_by>
+        <sys_updated_on>2024-02-28 06:11:37</sys_updated_on>
+    </pa_tabs>
+</record_update>

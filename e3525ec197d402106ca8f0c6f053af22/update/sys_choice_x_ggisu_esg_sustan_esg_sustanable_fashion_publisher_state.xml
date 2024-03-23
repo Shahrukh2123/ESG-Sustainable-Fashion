@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="state" table="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <name>x_ggisu_esg_sustan_esg_sustanable_fashion_publisher</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-10 04:29:24</sys_created_on>
+            <sys_id>1dd912cd975802106ca8f0c6f053af79</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>state</sys_name>
+            <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
+            <sys_update_name>sys_choice_x_ggisu_esg_sustan_esg_sustanable_fashion_publisher_state</sys_update_name>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-10 04:29:24</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Save as Draft</label>
+            <language>en</language>
+            <name>x_ggisu_esg_sustan_esg_sustanable_fashion_publisher</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-10 04:29:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9ac9d64d971802106ca8f0c6f053af7a</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-25 13:56:03</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Sold</label>
+            <language>en</language>
+            <name>x_ggisu_esg_sustan_esg_sustanable_fashion_publisher</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-10 04:29:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d1d91a8d975802106ca8f0c6f053afec</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-22 11:22:21</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Out of Stock</label>
+            <language>en</language>
+            <name>x_ggisu_esg_sustan_esg_sustanable_fashion_publisher</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-10 04:30:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9ee9de4d975802106ca8f0c6f053af60</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-22 11:20:30</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

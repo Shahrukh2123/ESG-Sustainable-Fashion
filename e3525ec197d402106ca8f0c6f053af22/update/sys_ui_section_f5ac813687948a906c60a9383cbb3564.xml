@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="f5ac813687948a906c60a9383cbb3564" sys_domain="global" table="x_ggisu_esg_sustan_esg_add_to_cart_bucket_item" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>item_name</element>
+            <position>0</position>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-15 09:21:42</sys_created_on>
+            <sys_id>f7ac097687948a906c60a9383cbb35d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_ggisu_esg_sustan_esg_add_to_cart_bucket_item" sys_domain="global" view="Default view">f5ac813687948a906c60a9383cbb3564</sys_ui_section>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-15 09:21:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>1</position>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-15 09:21:42</sys_created_on>
+            <sys_id>33ac097687948a906c60a9383cbb35d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_ggisu_esg_sustan_esg_add_to_cart_bucket_item" sys_domain="global" view="Default view">f5ac813687948a906c60a9383cbb3564</sys_ui_section>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-15 09:21:42</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>item_price</element>
+            <position>2</position>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-15 09:21:42</sys_created_on>
+            <sys_id>37ac097687948a906c60a9383cbb35d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_ggisu_esg_sustan_esg_add_to_cart_bucket_item" sys_domain="global" view="Default view">f5ac813687948a906c60a9383cbb3564</sys_ui_section>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-15 09:21:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>quanitity</element>
+            <position>3</position>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-15 09:21:42</sys_created_on>
+            <sys_id>3bac097687948a906c60a9383cbb35d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_ggisu_esg_sustan_esg_add_to_cart_bucket_item" sys_domain="global" view="Default view">f5ac813687948a906c60a9383cbb3564</sys_ui_section>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-15 09:21:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>4</position>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-15 09:21:42</sys_created_on>
+            <sys_id>3fac097687948a906c60a9383cbb35d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_ggisu_esg_sustan_esg_add_to_cart_bucket_item" sys_domain="global" view="Default view">f5ac813687948a906c60a9383cbb3564</sys_ui_section>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-15 09:21:42</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>buyer_name</element>
+            <position>5</position>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-15 09:21:42</sys_created_on>
+            <sys_id>33ac097687948a906c60a9383cbb35d5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_ggisu_esg_sustan_esg_add_to_cart_bucket_item" sys_domain="global" view="Default view">f5ac813687948a906c60a9383cbb3564</sys_ui_section>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-15 09:21:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>item_image</element>
+            <position>6</position>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-15 09:21:42</sys_created_on>
+            <sys_id>37ac097687948a906c60a9383cbb35d5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_ggisu_esg_sustan_esg_add_to_cart_bucket_item" sys_domain="global" view="Default view">f5ac813687948a906c60a9383cbb3564</sys_ui_section>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-15 09:21:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>7</position>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-15 09:21:42</sys_created_on>
+            <sys_id>3bac097687948a906c60a9383cbb35d5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_ggisu_esg_sustan_esg_add_to_cart_bucket_item" sys_domain="global" view="Default view">f5ac813687948a906c60a9383cbb3564</sys_ui_section>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-15 09:21:42</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>total_itemprice</element>
+            <position>8</position>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-15 09:21:42</sys_created_on>
+            <sys_id>3fac097687948a906c60a9383cbb35d5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_ggisu_esg_sustan_esg_add_to_cart_bucket_item" sys_domain="global" view="Default view">f5ac813687948a906c60a9383cbb3564</sys_ui_section>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-15 09:21:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>item_image1</element>
+            <position>9</position>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-27 11:35:17</sys_created_on>
+            <sys_id>d55e53e6876c4e14a3bb8776cebb35d0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_ggisu_esg_sustan_esg_add_to_cart_bucket_item" sys_domain="global" view="Default view">f5ac813687948a906c60a9383cbb3564</sys_ui_section>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-27 11:35:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>item_image_2</element>
+            <position>10</position>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-27 11:48:33</sys_created_on>
+            <sys_id>63512f2a87ac4e14a3bb8776cebb3544</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_ggisu_esg_sustan_esg_add_to_cart_bucket_item" sys_domain="global" view="Default view">f5ac813687948a906c60a9383cbb3564</sys_ui_section>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-27 11:48:33</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>item_image3</element>
+            <position>11</position>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-27 11:49:25</sys_created_on>
+            <sys_id>a491e3ea87ac4e14a3bb8776cebb355b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_ggisu_esg_sustan_esg_add_to_cart_bucket_item" sys_domain="global" view="Default view">f5ac813687948a906c60a9383cbb3564</sys_ui_section>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-27 11:49:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>item_image_4</element>
+            <position>12</position>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-27 11:50:20</sys_created_on>
+            <sys_id>35c1e72e87ac4e14a3bb8776cebb3590</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_ggisu_esg_sustan_esg_add_to_cart_bucket_item" sys_domain="global" view="Default view">f5ac813687948a906c60a9383cbb3564</sys_ui_section>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-27 11:50:20</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>item_image_5</element>
+            <position>13</position>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-27 11:51:16</sys_created_on>
+            <sys_id>e3f1af6e87ac4e14a3bb8776cebb3547</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_ggisu_esg_sustan_esg_add_to_cart_bucket_item" sys_domain="global" view="Default view">f5ac813687948a906c60a9383cbb3564</sys_ui_section>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-27 11:51:16</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>size</element>
+            <position>14</position>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-27 11:52:30</sys_created_on>
+            <sys_id>e542e72287ec4e14a3bb8776cebb35af</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_ggisu_esg_sustan_esg_add_to_cart_bucket_item" sys_domain="global" view="Default view">f5ac813687948a906c60a9383cbb3564</sys_ui_section>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-27 11:52:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>item_color</element>
+            <position>15</position>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-27 11:54:41</sys_created_on>
+            <sys_id>a5c2af6287ec4e14a3bb8776cebb359a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_ggisu_esg_sustan_esg_add_to_cart_bucket_item" sys_domain="global" view="Default view">f5ac813687948a906c60a9383cbb3564</sys_ui_section>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-27 11:54:41</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>gender</element>
+            <position>16</position>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-27 12:23:23</sys_created_on>
+            <sys_id>4259efee87608e14a3bb8776cebb3561</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_ggisu_esg_sustan_esg_add_to_cart_bucket_item" sys_domain="global" view="Default view">f5ac813687948a906c60a9383cbb3564</sys_ui_section>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-27 12:23:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>17</position>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-27 12:29:16</sys_created_on>
+            <sys_id>04ba2f6e87a08e14a3bb8776cebb351b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_ggisu_esg_sustan_esg_add_to_cart_bucket_item" sys_domain="global" view="Default view">f5ac813687948a906c60a9383cbb3564</sys_ui_section>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-27 12:29:16</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>18</position>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-27 18:09:46</sys_created_on>
+            <sys_id>379878fa87240254a3bb8776cebb35bd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_ggisu_esg_sustan_esg_add_to_cart_bucket_item" sys_domain="global" view="Default view">f5ac813687948a906c60a9383cbb3564</sys_ui_section>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-27 18:09:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_ggisu_esg_sustan_esg_add_to_cart_bucket_item</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>703318399</sys_created_by>
+            <sys_created_on>2024-02-15 09:21:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f5ac813687948a906c60a9383cbb3564</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_ggisu_esg_sustan_esg_add_to_cart_bucket_item</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
+            <sys_update_name>sys_ui_section_f5ac813687948a906c60a9383cbb3564</sys_update_name>
+            <sys_updated_by>703318399</sys_updated_by>
+            <sys_updated_on>2024-02-15 09:21:34</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
+    <sp_page action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <css/>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <human_readable_url_structure/>
+        <id>esgs_admin_dashboard</id>
+        <internal>false</internal>
+        <omit_watcher>false</omit_watcher>
+        <public>false</public>
+        <roles>x_ggisu_esg_sustan.ESG Fashion admin users</roles>
+        <seo_script/>
+        <short_description/>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>703318399</sys_created_by>
+        <sys_created_on>2024-02-28 09:07:56</sys_created_on>
+        <sys_id>93150c0f87e84654a3bb8776cebb35d4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>esgs_admin_dashboard</sys_name>
+        <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
+        <sys_update_name>sp_page_93150c0f87e84654a3bb8776cebb35d4</sys_update_name>
+        <sys_updated_by>703318399</sys_updated_by>
+        <sys_updated_on>2024-02-28 09:18:29</sys_updated_on>
+        <title>ESG Sustanable Fashion  Admin Dashboard</title>
+        <use_seo_script>false</use_seo_script>
+    </sp_page>
+    <sys_translated_text action="delete_multiple" query="documentkey=93150c0f87e84654a3bb8776cebb35d4"/>
+</record_update>

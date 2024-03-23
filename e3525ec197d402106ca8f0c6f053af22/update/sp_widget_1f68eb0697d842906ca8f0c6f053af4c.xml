@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.hot-sell-title{
+ font-size: 3.8rem;
+    font-weight: 700;
+    margin-top: -8rem; 
+}
+.btn-compact{
+  border:3px solid red;
+  font-weight:500;
+}
+.rm_icon{
+ width:20px; 
+}
+
+
+@media (min-width: 320px) and (max-width: 387px) {
+.img_sr{
+  width:100%;
+  margin-bottom: 12px;
+  }
+}
+
+@media (min-width: 388px) and (max-width: 992px) {
+.img_sr{
+  width:100%;
+  margin-bottom: 12px;
+  }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+.img_sr{
+  width:100%;
+  margin-bottom: 12px;
+  }
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>esg_fashion_buyer_hot_sell</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>ESG Fashion Buyer Hot Sell</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>703318399</sys_created_by>
+        <sys_created_on>2024-02-13 12:47:13</sys_created_on>
+        <sys_id>1f68eb0697d842906ca8f0c6f053af4c</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>ESG Fashion Buyer Hot Sell</sys_name>
+        <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
+        <sys_update_name>sp_widget_1f68eb0697d842906ca8f0c6f053af4c</sys_update_name>
+        <sys_updated_by>703318399</sys_updated_by>
+        <sys_updated_on>2024-03-13 13:58:03</sys_updated_on>
+        <template><![CDATA[<head>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<div class="col-md-12">
+  <h4 class="hot-sell-title">Red Hot Sell</h4>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default bg-white main-content">
+      <div class="panel-body">
+         <div class="tiles" >
+            <div class="col-sm-12  col-xs-12 col-md-6">
+             <a><div class="mainbox">
+                <div style="background: white">
+                  <img class="img_sr" src="https://s7d4.scene7.com/is/image/BIworldwide/Valentine%20day?$GRMBannerBG$" width="500px">
+                </div> 
+              </div>
+              </a>
+            </div>
+            <div class="col-sm-12 col-xs-12 col-md-6">
+             <a><div class="mainbox">
+                <div style="background: white">
+                  <img class="img_sr" src="https://s7d4.scene7.com/is/image/BIworldwide/Hot%20Sale%20(1)?$GRMBannerBG$" width="500px">
+                </div> 
+              </div>
+              </a>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

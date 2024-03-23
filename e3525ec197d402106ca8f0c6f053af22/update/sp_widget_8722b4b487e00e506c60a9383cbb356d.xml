@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+	
+	c.becomeSellar=function(){
+		console.log('become a sellar');
+		c.data.value="hello"
+		c.server.update();
+	
+	
+};
+	
+	
+	c.viewPublishedItem=function(){
+		window.location.href="/esgs_fashion?id=esg_fashion_publish_item";
+	}
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>:root {
+  font-size: 20px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+p:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+body {
+  font: 1em/1.618 Inter, sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  min-height: 100vh;
+  padding: 30px;
+  margin: 0;
+  
+  color: #224;
+  background:url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center / cover no-repeat fixed;
+}
+
+.card {
+ max-width: 100%;
+    min-height: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 18px;
+ // margin-top:-16rem;
+    font-family: sans-serif;
+    max-width: 100%;
+    height: auto;
+    padding: 3.5rem;
+    border: 0.1rem solid rgba(255, 255, 255, .25);
+    border-radius: 2rem;
+    background-color: rgba(255, 255, 255, .45);
+    box-shadow: 0 0 1rem 0.1rem rgba(0, 0, 0, .25);
+    backdrop-filter: blur(15px);
+}
+
+.card-footer {
+  font-size: 0.65em;
+  color: #446;
+}.card
+{
+  text-align: center;
+}
+.card-body
+{
+  position: relative;
+     top: -9rem;
+    /* left: 2rem;*/
+  color:#ffffff;
+  
+}
+
+.butcal
+{
+  border: 2px solid #fff;
+  color:#fff;
+  background-color:#4aabca;
+  padding:5px 5rem;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-size:16px;
+  text-align:center;
+  float:right;
+  border-radius:50px;
+}
+.butcal1{
+  border: 2px solid #fff;
+  color:#fff;
+  background-color:#073262;
+  padding:5px 5rem;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-size:16px;
+  text-align:center;
+  float:right;
+  border-radius:50px; 
+}
+.card-img-top
+{
+   box-shadow: 0 20px 25px 0 rgba(1, 165, 199, 0.2), 0 20px 30px 0 rgba(1, 165, 199, 0.19);
+  text-align: center;
+}
+.butcal span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.butcal1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+
+.butcal span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.butcal1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+
+.butcal:hover span {
+  padding-right: 25px;
+}
+.butcal1:hover span {
+  padding-right: 25px;
+}
+
+
+.butcal:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.butcal1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.card1{
+ background-color: #FF555F;
+  box-shadow:0 0 1rem 0.1rem rgba(0, 0, 0, .25);
+  height:26rem;
+}
+.card2{
+ background-color: #00AECF;
+  box-shadow:0 0 1rem 0.1rem rgba(0, 0, 0, .25);
+    height:26rem;
+}
+.card-footer{
+ padding: 0.75rem 1.25rem;
+    background-color: rgba(0,0,0,.03);
+    border-top: 1px solid rgba(0,0,0,.125); 
+}
+
+
+
+@media (min-width: 320px) and (max-width: 387px) {
+.card {
+    min-height: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 14px;
+    font-family: sans-serif;
+    max-width: 100%;
+    height: auto;
+    padding: 0.5rem;
+    border: 0.1rem solid rgba(255, 255, 255, .25);
+    border-radius: 2rem;
+    background-color: rgba(255, 255, 255, .45);
+    box-shadow: 0 0 1rem 0.1rem rgba(0, 0, 0, .25);
+    backdrop-filter: blur(15px);
+}
+  .card-img-top{width:360px;}
+  .card1{margin-bottom:12px;}
+}
+
+@media (min-width: 388px) and (max-width: 992px) {
+.card {
+    min-height: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 14px;
+    font-family: sans-serif;
+    max-width: 100%;
+    height: auto;
+    padding: 0.5rem;
+    border: 0.1rem solid rgba(255, 255, 255, .25);
+    border-radius: 2rem;
+    background-color: rgba(255, 255, 255, .45);
+    box-shadow: 0 0 1rem 0.1rem rgba(0, 0, 0, .25);
+    backdrop-filter: blur(15px);
+}
+  .card-img-top{width:393px;}
+  .card1{margin-bottom:12px;}
+}
+
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>esg_fashion_home_page_widget</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>ESG Fashion Home Page widget</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	data.isPublisher=false;
+	 
+	var gr1=new GlideRecord('x_ggisu_esg_sustan_esgs_fashion_publishers_collection');
+	gr1.addEncodedQuery('publisher_name=javascript:gs.getUserID();');
+	gr1.query();
+	if(gr1.next()){
+		data.isPublisher=true;
+	}
+	
+	
+	if(input && input.value){
+  var gr=new GlideRecord('x_ggisu_esg_sustan_esgs_fashion_publishers_collection');
+	gr.addEncodedQuery('publisher_name!=javascript:gs.getUserID();');
+	gr.query();
+	if(gr.next()){
+		gr.initialize();
+		gr.publisher_name=gs.getUserID();
+		gr.publisher_cheer_points='0';
+		gr.insert();
+		gs.addInfoMessage('You are now a Seller,Start selling your products !!!');
+		data.isPublisher=true;
+	}
+}
+
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>703318399</sys_created_by>
+        <sys_created_on>2024-02-21 12:34:06</sys_created_on>
+        <sys_id>8722b4b487e00e506c60a9383cbb356d</sys_id>
+        <sys_mod_count>98</sys_mod_count>
+        <sys_name>ESG Fashion Home Page widget</sys_name>
+        <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
+        <sys_update_name>sp_widget_8722b4b487e00e506c60a9383cbb356d</sys_update_name>
+        <sys_updated_by>703318399</sys_updated_by>
+        <sys_updated_on>2024-03-13 13:44:14</sys_updated_on>
+        <template><![CDATA[<head>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="col-md-12 col-xs-12  col-sm-12 col-xxs-12">
+  <div class="card">
+  <p><strong>ESG Sustanable Fashion</strong> the second-hand fashion marketplace for Genpact employees, providing them with a sustainable solution, instead of keeping or throwing away unused/seldom used clothing articles, they don’t utilize, to exchange with other colleagues, for Genpact cheer points</p>
+</div>
+</div>
+<br>
+<br>
+<div class="row" style="margin-top:15rem;">
+  <div class="col-md-5">
+  <div class="card1">
+    
+    <img src="https://genpactonline.sharepoint.com/sites/gsocialgo/Lists/CorpCom/Attachments/2901/BANNER%20Belonging%20everyone%20everywhere.gif" class="card-img-top" alt="..." width="457px" height="200px">
+    
+    <div class="card-body">
+      
+      <!--<a href="#" class="butcal"><span>Start Browsing</span></a>-->
+      
+    </div>
+        <div class="card-footer">
+       <a href="/esgs_fashion?id=esg_fashions_buyers" class="butcal" target="_blank"><span>Start Browsing Products</span></a>
+       </div>
+    
+    
+  </div>
+</div>
+  <div class="col-md-2">
+    
+  </div>
+  <div class="col-md-5">
+  <div class="card2">
+    
+    <img src="/card_2_esg_fashion.png" class="card-img-top" alt="..." width="457px" height="200px">
+    
+    <div class="card-body">
+      
+     <!-- <a href="#" class="butcal text-center"><span>Login</span></a>-->
+      
+    </div>
+     <div class="card-footer" ng-if="!c.data.isPublisher">
+       <a  href="#" class="butcal1" target="_blank" ng-click="c.becomeSellar();"><span>Become a Seller</span></a>
+       </div>
+      <div class="card-footer"  ng-if="c.data.isPublisher">
+       <a href="#" class="butcal1" ng-click="c.viewPublishedItem();"><span>View Sold Items</span></a>
+       </div>
+  </div>
+</div>
+  </div>
+</body>]]></template>
+    </sp_widget>
+</record_update>

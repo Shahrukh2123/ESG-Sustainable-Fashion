@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($uibModal,$scope) {
+  /* widget controller */
+  var c = this;
+	
+	c.showImages=function(sysId){
+			c.modalInstance = $uibModal.open({
+                            templateUrl: 'open_images',
+                            scope: $scope,
+			                       backdrop: 'static'
+                        });
+		   c.data.sysId=sysId;
+		   c.server.update();
+		
+	}
+	
+	c.close=function(){
+			c.modalInstance.close();
+   }
+	
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.mainbox {
+    box-shadow: 0 4px 8px 0 grey;
+  margin-bottom:12px;
+}
+.contents{
+    text-align: center;
+    padding: 14px;
+    font-size: 20px; 
+}
+.owl-item{
+ width: 228px;
+ height:399px;
+ padding:2rem;
+  margin-top:17px;
+  cursor;pointer; 
+}
+strong{
+ color:black; 
+}
+.merchItem{
+        width: 17rem;
+    height: auto;
+    cursor: zoom-in;
+    border-radius: 15px;
+    margin-left: 8px;
+    transition: .3s;
+  
+}
+
+.merchItem:focus{
+    transition: -webkit-transform 0.25s ease;
+}
+
+.merchItem:active {
+  -webkit-transform: scale(3);
+}
+.mySlides2 {
+  transition: -webkit-transform 0.25s ease;
+}
+
+.mySlides2:active {
+  -webkit-transform: scale(3);
+}
+
+.owl-item {
+ box-shadow:0 .125rem 0.5rem grey !important; 
+  
+}
+p-3{
+ padding:1rem important;
+  border-radius:.25rem!important;
+}
+.publish-btn{
+      border-radius: 70rem;
+    width: 43rem;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 700;
+    border:1px solid #FF555F;
+  background-color:#FF555F;
+    font-family: sans-serif;
+}
+.header-text,.list-item{
+ color:#FFFFFF; 
+  text-align:center;
+   font-family:"Calibri", sans-serif;
+}
+
+.list-item{
+list-style:none;
+  font-size:17px;
+}
+.header-text{
+      background: #10548C;
+    font-size: 3rem;
+    margin-top: -9rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.warning-text{
+     margin-top: 11rem;
+    background: #10548C;
+    font-size: 3.0rem;
+    padding-bottom: 12px; 
+}
+.gridItemImage{
+ margin-bottom:2rem; 
+}
+.description{
+     font-size: 19px;
+    font-weight: 500;
+    font-family: ui-rounded; 
+}
+
+@media (min-width: 320px) and (max-width: 387px) {
+  .content-experrince-carousel{margin-top:80px;}
+  .owl-item{
+     width: 228px;
+ height:399px;
+ padding:2rem;
+  margin-top:17px;
+  cursor;pointer; 
+    position: relative;
+    left: 17%;
+  }
+  .publish-btn{width:31rem;}
+}
+
+@media (min-width: 388px) and (max-width: 992px) {
+ .content-experrince-carousel{margin-top:80px;}
+  .owl-item{
+     width: 228px;
+ height:399px;
+ padding:2rem;
+  margin-top:17px;
+  cursor;pointer; 
+    position: relative;
+    left: 17%;
+  }
+   .publish-btn{width:31rem;}
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>ESG Publisher Item Registration Widget</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>ESG Publisher Item Registration Widget</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	data.isPublisher=false;
+		data.imgArr=[];
+	var gr1=new GlideRecord('x_ggisu_esg_sustan_esgs_fashion_publishers_collection');
+	gr1.addEncodedQuery('publisher_name=javascript:gs.getUserID();');
+	gr1.query();
+	if(gr1.next()){
+		data.isPublisher=true;
+	} else{
+			data.isPublisher=fals;
+	}
+	
+	data.publishedItem=[];
+	var gr=new GlideRecord('x_ggisu_esg_sustan_esg_sustanable_fashion_publisher');
+	gr.addEncodedQuery('state=2^sys_created_by=javascript:gs.getUserName();');
+	gr.query();
+	while(gr.next()){
+		var obj={};
+		obj.prodId=gr.getValue('number');
+		obj.itemname=gr.getValue('item_name');
+		obj.itemprice=gr.getValue('item_price');
+		obj.quantity=gr.getValue('item_quantity');
+		obj.itemtype=gr.getValue('item_type');
+		obj.itemsysId=gr.getValue('sys_id');
+		obj.gender=gr.getValue('gender');
+		obj.itemImage=gr.getValue('item_image');
+		obj.itemImage2=gr.getValue('item_image_2');
+		obj.itemImage3=gr.getValue('item_image_3');
+		obj.itemImage4=gr.getValue('item_image_4');
+	   obj.itemImage5=gr.getValue('item_image_5');
+		
+		obj.size=gr.getValue('size');
+		obj.color=gr.getValue('item_color');
+			data.publishedItem.push(obj);
+	}
+	console.log(data.publishedItem);
+	
+	if(input){
+	var gr2=new GlideRecord('x_ggisu_esg_sustan_esg_sustanable_fashion_publisher');
+	gr2.addEncodedQuery('sys_id='+input.sysId);
+	gr2.query();
+		if(gr2.next()){
+			var obj1={};
+		obj1.itemname1=gr2.getValue('item_name');
+		obj1.itemImage2=gr2.getValue('item_image_2');
+		obj1.itemImage3=gr2.getValue('item_image_3');
+		obj1.itemImage4=gr2.getValue('item_image_4');
+		obj1.itemImage5=gr2.getValue('item_image_5');
+			data.imgArr.push(obj1);
+		}
+		
+	}
+
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>703318399</sys_created_by>
+        <sys_created_on>2024-02-10 13:10:22</sys_created_on>
+        <sys_id>87e0105d975c82106ca8f0c6f053afa7</sys_id>
+        <sys_mod_count>184</sys_mod_count>
+        <sys_name>ESG Publisher Item Registration Widget</sys_name>
+        <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
+        <sys_update_name>sp_widget_87e0105d975c82106ca8f0c6f053afa7</sys_update_name>
+        <sys_updated_by>703318399</sys_updated_by>
+        <sys_updated_on>2024-03-15 04:37:38</sys_updated_on>
+        <template><![CDATA[<head>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<div class="warning-text" style="margin-top:11rem;" ng-if="!c.data.isPublisher">
+  <h2 class="header-text">
+    This page is available for ESG Sustainable Sellers only
+  </h2>
+  <ul>
+    <li class="list-item">
+      In case you have seller access, and are still not able to access, please work with Genpact support team to get it corrected.
+    </li>
+  </ul>
+</div>
+
+
+<div class="for-publisher" ng-if="c.data.isPublisher">
+ <div class="col-md-12" style="margin-top:-95px;">
+  <h2 class="great-discount's text-success">Great Discount's</h2>
+</div>
+<div class="row">
+  <div class="col-md-3">
+    <div class="mainbox"> 
+        <div style="background: white"> 
+         <div class="video_embed"> 
+          <center> 
+           <div class="video_wrapper"> 
+            <img class="" height="150px" width="100%" src="https://s7d4.scene7.com/is/image/BIworldwide/coupon-offers-banner3?$GRMCategoryCard$" role="presentation"> 
+           </div> 
+          </center> 
+         </div> 
+         <div class="contents">
+           <strong class="text-center text-bold">
+             Coupen Bonanza
+           </strong>
+         </div> 
+        </div> 
+       </div>
+  </div>
+  <div class="col-md-3">
+     <div class="mainbox"> 
+        <div style="background: white"> 
+         <div class="video_embed"> 
+          <center> 
+           <div class="video_wrapper"> 
+            <img class="" height="150px" width="100%" src="https://s7d4.scene7.com/is/image/BIworldwide/Smart%20watch3?$GRMCategoryCard$" role="presentation"> 
+           </div> 
+          </center> 
+         </div> 
+         <div class="contents">
+           <strong class="text-center text-bold">
+             Existing Watches 
+           </strong>
+         </div> 
+        </div> 
+       </div>
+  </div>
+  <div class="col-md-3">
+     <div class="mainbox"> 
+        <div style="background: white"> 
+         <div class="video_embed"> 
+          <center> 
+           <div class="video_wrapper"> 
+            <img class="" height="150px" width="100%" src="https://s7d4.scene7.com/is/image/BIworldwide/Air%20purifier_2?$GRMCategoryCard$" role="presentation"> 
+           </div> 
+          </center> 
+         </div> 
+         <div class="contents">
+           <strong class="text-center text-bold">
+            Air Purifier
+           </strong>
+         </div> 
+        </div> 
+       </div>
+  </div>
+  <div class="col-md-3">
+     <div class="mainbox"> 
+        <div style="background: white"> 
+         <div class="video_embed"> 
+          <center> 
+           <div class="video_wrapper"> 
+            <img class="" height="150px" width="100%" src="https://s7d4.scene7.com/is/image/BIworldwide/solar?$GRMCategoryCard$" role="presentation"> 
+           </div> 
+          </center> 
+         </div> 
+         <div class="contents">
+           <strong class="text-center text-bold">
+             Solar Devices Great Deals
+           </strong>
+         </div> 
+        </div> 
+       </div>
+  </div>
+</div>
+<div class="row" style="margin-bottom:12rem;">
+  <div class="col-md-12">
+    
+  </div>
+  <h2 style="margin-left:18px;">
+    Your Sold Items<br>
+    <br>
+  </h2>
+  <div class="col-md-12" ng-if="data.publishedItem.length==0">
+    <div>
+      <h2 class="text-info text-center">
+         No more sold items yet
+      </h2>
+    </div>
+  </div>
+  <div class="col-md-12">
+   <div class="col-md-3" style="display:flex;justify-content:space-between;cursor:pointer;" ng-if="data.publishedItem.length>0"  ng-repeat="item in data.publishedItem">
+    <div class="owl-item active shadow-sm p-3"><div class="items">
+                    				
+					
+						
+							<div class="grmProductCard">
+								<div class="gridItem">
+				
+									<div class="gridItemInner">
+										<div class="gridItemImage">
+											
+											<a class="gridItemLink"  style="cursor:pointer;" target="_blank">
+													<img class="merchItem" ng-click="enlargeImg(this)" onerror="this.onerror=null;this.srcset='';this.src='https://s7d4.scene7.com/is/image/BIworldwide/no-image-product-card?$GRMProductCard$&amp;fmt=png';" src="https://genpactdevelop.service-now.com/sys_attachment.do?sys_id={{item.itemImage}}">
+											</a>
+                      	<a class="gridItemLink"  style="cursor:pointer;" target="_blank"  ng-click="c.showImages(item.itemsysId)">
+                         Show More.
+											</a>
+										</div>
+										<div class="merchInfo" style="height: 127px;">
+											<a class="gridItemLink">
+												<a class="description" data-toggle="tooltip" data-placement="bottom" title="" href="/esgs_fashion?id=esg_published_item_detail&sys_id={{item.itemsysId}}" target="blank">{{item.itemname}}</a>
+													<!--<p class="price">
+														<span class="actualPrice">{{item.itemprice}}</span>
+														<span class="mediaName">Points</span>
+													</p>-->
+                        	<p class="price">
+                             <span class="mediaName"><b>Size:&nbsp;</b></span>
+														<span class="size">{{item.size}}</span>
+													</p>
+                         <p class="price">
+                           	<span class="mediaName"><b>Color:&nbsp;</b></span>
+														<span class="size">{{item.color}}</span>
+													</p>
+                         <p class="price">
+                           	<span class="mediaName"><b>Suitable for:&nbsp;</b></span>
+														<span class="size">{{item.gender}}</span>
+													</p>
+												<p class="productId">
+                          <span><b>Product ID</b>: {{item.prodId}}</span>
+												</p>
+                        
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+          </div></div>
+    
+    
+  </div>   
+  </div>
+
+</div>
+<div class="publish-item" style="margin-bottom:12rem;">
+  <center>
+  <a class="btn btn-info btn-lg text-center publish-btn" target="_blank" href="/esgs_fashion?id=esg_fashion_publish_new_item">
+    Sold your Items here &nbsp;<i class="fa  fa-shopping-cart" style="font-size:24px"></i>
+  </a>
+    </center>
+</div>
+</div>
+
+<script type="text/ng-template" id="open_images">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+.modal-content{
+    width: 86rem;
+    left: -12rem;
+    height: 35rem;
+}
+.merchItem{
+        width: 17rem;
+    height: auto;
+    cursor: zoom-in;
+    border-radius: 15px;
+    margin-left: 8px;
+    transition: .3s;
+  
+}
+.merchItem:focus{
+    transition: -webkit-transform 0.25s ease;
+}
+
+.merchItem:active {
+  -webkit-transform: scale(3);
+}
+.mySlides2 {
+  transition: -webkit-transform 0.25s ease;
+}
+
+.mySlides2:active {
+  -webkit-transform: scale(3);
+}
+
+  </style>
+  </head>
+  <div class="close-button">
+     <a type="button" class="btn btn-close" ng-click="c.close()" style="float:right;margin-top:15px;font-size: 26px;">×</a>
+  </div>
+   <div class="panel panel-default" ng-repeat="item1 in c.data.imgArr" style="margin-top:10rem;">
+  <div class="panel-body">
+  <div style="display:flex;display: flex;justify-content: space-between;width: 82rem;">
+   <div class="col-md-3">
+   <img class="merchItem" ng-click="enlargeImg(this)" src="https://genpactdevelop.service-now.com/sys_attachment.do?sys_id={{item1.itemImage2}}" style="vertical-align: middle;height: 14rem;width: 16rem;">
+   </div>
+    <div class="col-md-3">
+   <img class="merchItem" ng-click="enlargeImg(this)" src="https://genpactdevelop.service-now.com/sys_attachment.do?sys_id={{item1.itemImage3}}" style="vertical-align: middle;height: 14rem;width: 16rem;">
+   </div>
+    <div class="col-md-3">
+   <img class="merchItem" ng-click="enlargeImg(this)" src="https://genpactdevelop.service-now.com/sys_attachment.do?sys_id={{item1.itemImage4}}" style="vertical-align: middle;height: 14rem;width: 16rem;">
+   </div>
+   <div class="col-md-3">
+   <img class="merchItem" ng-click="enlargeImg(this)" src="https://genpactdevelop.service-now.com/sys_attachment.do?sys_id={{item1.itemImage5}}" style="vertical-align: middle;height: 14rem;width: 16rem;">
+   </div>
+   </div>
+  </div>
+   </div>
+</script>
+]]></template>
+    </sp_widget>
+</record_update>

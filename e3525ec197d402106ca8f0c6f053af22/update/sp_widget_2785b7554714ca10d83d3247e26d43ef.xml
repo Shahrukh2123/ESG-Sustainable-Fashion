@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function(spUtil) {
+  /* widget controller */
+  var c = this;
+	 c.genaetetext=false;
+	spUtil.get("widget-sc-cat-item-v2", {
+        sys_id: "18c7f45197d8c2106ca8f0c6f053aff8"
+    }).then(function(response) {
+        c.RP = response;
+    });
+	
+	c.generateGenAI=function(){
+	  c.genaetetext=true;
+		var ds=document.getElementById('sp_formfield_additional_details');
+		var itemname=document.getElementById('sp_formfield_item_name');
+		if(ds.value=='' && itemname.value==''){
+			alert('Product Item Name and Additional Details cannot be left empty');
+			return false;
+		} else{
+		console.log(ds.value);
+		c.data.description=ds.value;
+		c.data.item_name=itemname;
+	  c.data.action="GenerateGenAIDecc";
+		c.server.update();
+	}
+}
+	
+};
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.btn-dark{
+  background-color: #FF555F;
+    border-color: #000912;
+  color:#FFF;
+  //width: 20rem;
+  width: 19rem;
+    text-align: center;
+    border-radius: 5px;
+      margin-left: -4px;
+}
+
+.panel-default{
+//margin-top:-14em; 
+}
+.textARra{
+     height: auto;
+    background-color: skyblue;
+    font-size: 18px;
+    font-family: 'Inter';
+    color: white;
+    margin-bottom: 17px; 
+}
+
+@media (min-width: 320px) and (max-width: 387px) {
+  .panel-default1{display:none;}
+}
+
+@media (min-width: 388px) and (max-width: 992px) {
+  .panel-default1{display:none;}
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>esg_sustanable_fashion_publish_new_item</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>ESG Sustanable Fashion Publish New Item</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	
+	if(input && input.action=="GenerateGenAIDecc"){
+ var r = new sn_ws.RESTMessageV2('x_ggisu_esg_sustan.ESG Fashion Generate GenAI Description', 'post_method');
+ r.setStringParameterNoEscape('engine', 'gpt-35-turbo');
+ r.setStringParameterNoEscape('content', 'Generate clear and accurate description in 50 word'+input.description);
+
+ var response = r.execute();
+ var responseBody = response.getBody();
+ var responseBody1=JSON.parse(responseBody);
+		data.generatedtext=responseBody1.choices[0].message.content;
+		
+ var httpStatus = response.getStatusCode();
+
+}
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>703318399</sys_created_by>
+        <sys_created_on>2024-02-11 05:49:04</sys_created_on>
+        <sys_id>2785b7554714ca10d83d3247e26d43ef</sys_id>
+        <sys_mod_count>77</sys_mod_count>
+        <sys_name>ESG Sustanable Fashion Publish New Item</sys_name>
+        <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
+        <sys_update_name>sp_widget_2785b7554714ca10d83d3247e26d43ef</sys_update_name>
+        <sys_updated_by>703318399</sys_updated_by>
+        <sys_updated_on>2024-03-15 04:44:20</sys_updated_on>
+        <template><![CDATA[<head>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<div class="col-md-12 col-xs-12 col-sm-12">
+  <div class="col-md-12">
+    <div class="col-md-3" style="float: right;top: 4px;left: --5px;">
+   <div class="panel panel-default1 bg-white" style="margin-left: 1rem; width: 23rem;">
+    <div class="panel-body" style="padding: 2.5rem;">
+      <button class="btn btn-dark btn-link" ng-click="c.generateGenAI()">
+       Generate GenAI Description
+     </button>
+   </div>  
+ </div>  
+      <div ng-if="c.genaetetext">
+       <textarea class="form-control textARra" rows="3" ng-model="c.data.generatedtext"></textarea>
+      </div>
+</div>
+    <div>
+      <h1 class="text-primary text-white">
+        Sold Your Items here to make it available for Buyers !!
+      </h1>
+    </div>
+    <sp-widget widget="c.RP"></sp-widget>
+</div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

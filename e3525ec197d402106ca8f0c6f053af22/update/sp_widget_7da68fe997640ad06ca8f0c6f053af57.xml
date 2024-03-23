@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+	
+	c.soldItem=function(id){
+		console.log(id);
+		c.data.itemsysId=id;
+		c.data.action="soldItem";
+			c.server.update().then(function(res){
+				window.reload();
+			});
+	}
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.page-content {
+    visibility: visible;
+}
+.header{
+ font-size:22px;
+  line-height: 1.125em;
+  font-family: inherit;
+    font-weight: bolder;
+    color:skyblue;
+    text-decoration:underline;
+    
+}
+
+.header1{
+ font-size:30px;
+  line-height: 1.125em;
+  font-family: inherit;
+    font-weight: bolder;
+  color:#FF555F;
+  text-align:center;
+}
+span4{
+     display: block;
+    width: 100%;
+    min-height: 36px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 1.5544%; 
+  box-shadow:0 0.4rem 0.8rem 0 white;
+}
+tr{
+ border-bottom:2px solid #FF545E;
+}
+.data-publisher{
+ box-shadow:0 0.4rem 0.8rem 0 skyblue; 
+}
+.merchItem{
+        width: 17rem;
+    height: auto;
+    cursor: zoom-in;
+    border-radius: 15px;
+    margin-left: 8px;
+    transition: .3s;
+  
+}
+
+.merchItem:focus{
+    transition: -webkit-transform 0.25s ease;
+}
+
+.merchItem:active {
+  -webkit-transform: scale(3);
+}
+.mySlides2 {
+  transition: -webkit-transform 0.25s ease;
+}
+
+.mySlides2:active {
+  -webkit-transform: scale(3);
+}
+
+.owl-item {
+ box-shadow:0 .125rem 2.5rem black; 
+  
+  
+}
+p-3{
+ padding:1rem important;
+  border-radius:.25rem!important;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>my_sellar_profile_widget</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>My Sellar Profile widget</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	
+	data.result=[];
+	var gr1=new GlideRecord('x_ggisu_esg_sustan_esgs_fashion_publishers_collection');
+	gr1.addEncodedQuery('publisher_name=javascript:gs.getUserID();');
+	gr1.query();
+	if(gr1.next()){
+		var gr2=new GlideRecord('sys_user');
+	gr2.addEncodedQuery('user_name='+gs.getUserName());
+	gr2.query();
+	if(gr2.next()){
+		 var obj2={};
+		obj2.ohr_id=gr2.getValue('user_name');
+		obj2.first_name=gr2.getValue('first_name');
+		obj2.last_name=gr2.getValue('last_name');
+		obj2.location=gr2.getDisplayValue('location');
+		obj2.u_center_of_excellence=gr2.getValue('u_coe');
+		obj2.u_service_delivery_organization=gr2.getValue('u_sdo');
+		obj2.u_band=gr2.getValue('u_band');
+		obj2.u_supervisor=gr2.getDisplayValue('manager');
+		obj2.title=gr2.getDisplayValue('title');
+		obj2.city=gr2.getDisplayValue('city');
+		obj2.email=gr2.getValue('email');
+		obj2.mobile=gr2.getValue('mobile_phone');
+		obj2.u_band=gr2.getValue('u_band');
+		obj2.u_hr_manager=gr2.getDisplayValue('u_hr_manager');
+		obj2.company=gr2.getValue('company');
+		obj2.department=gr2.getDisplayValue('department');
+		obj2.u_legal_entity=gr2.getValue('u_legal_entity');
+		data.result.push(obj2);
+	}
+}
+	
+		data.publishedItem=[];
+	var gr=new GlideRecord('x_ggisu_esg_sustan_esg_sustanable_fashion_publisher');
+	gr.addEncodedQuery('state=2^sys_created_by=javascript:gs.getUserName();');
+	gr.query();
+	while(gr.next()){
+		var obj={};
+		obj.prodId=gr.getValue('number');
+		obj.itemname=gr.getValue('item_name');
+		obj.itemprice=gr.getValue('item_price');
+		obj.quantity=gr.getValue('item_quantity');
+		obj.itemtype=gr.getValue('item_type');
+		obj.itemsysId=gr.getValue('sys_id');
+		obj.gender=gr.getValue('gender');
+		obj.itemImage=gr.getValue('item_image');
+		obj.itemImage2=gr.getValue('item_image_2');
+		obj.itemImage3=gr.getValue('item_image_3');
+		obj.itemImage4=gr.getValue('item_image_4');
+	   obj.itemImage5=gr.getValue('item_image_5');
+		
+		obj.size=gr.getValue('size');
+		obj.color=gr.getValue('item_color');
+			data.publishedItem.push(obj);
+	}
+	console.log(data.publishedItem);
+		data.broughtitem=[];
+	var gr3=new GlideRecord('x_ggisu_esg_sustan_esg_sustanable_fashion_publisher');
+	gr3.addEncodedQuery('state=1^sys_created_by=javascript:gs.getUserName();');
+	gr3.query();
+	while(gr3.next()){
+		var obj1={};
+		obj1.prodId=gr3.getValue('number');
+		obj1.itemname=gr3.getValue('item_name');
+		obj1.itemprice=gr3.getValue('item_price');
+		obj1.quantity=gr3.getValue('item_quantity');
+		obj1.itemtype=gr3.getValue('item_type');
+		obj1.itemsysId=gr3.getValue('sys_id');
+		obj1.gender=gr3.getValue('gender');
+		obj1.itemImage=gr3.getValue('item_image');
+		obj1.itemImage2=gr3.getValue('item_image_2');
+		obj1.itemImage3=gr3.getValue('item_image_3');
+		obj1.itemImage4=gr3.getValue('item_image_4');
+	   obj1.itemImage5=gr3.getValue('item_image_5');
+		
+		obj1.size=gr3.getValue('size');
+		obj1.color=gr3.getValue('item_color');
+			data.broughtitem.push(obj1);
+	}
+	console.log(data.broughtitem);
+	
+	if(input && input.action=="soldItem"){
+	var gr4=new GlideRecord('x_ggisu_esg_sustan_esg_sustanable_fashion_publisher');
+	gr4.addEncodedQuery('sys_id='+input.itemsysId);
+	gr4.query();
+		if(gr4.next()){
+			gr4.state=2;
+			gr4.update();
+			gs.addInfoMessage('Item Published succesfully');
+		}
+	}
+	
+	
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>703318399</sys_created_by>
+        <sys_created_on>2024-02-24 07:18:17</sys_created_on>
+        <sys_id>7da68fe997640ad06ca8f0c6f053af57</sys_id>
+        <sys_mod_count>60</sys_mod_count>
+        <sys_name>My Sellar Profile widget</sys_name>
+        <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
+        <sys_update_name>sp_widget_7da68fe997640ad06ca8f0c6f053af57</sys_update_name>
+        <sys_updated_by>703318399</sys_updated_by>
+        <sys_updated_on>2024-02-28 05:31:30</sys_updated_on>
+        <template><![CDATA[<section class="contents">
+  <div class="container">
+    <div class="row-fluid">
+      <div class="profile-content">
+        <div class="profile-header">
+          <h2 class="header1">
+            My Seller Profile
+          </h2>
+        </div>
+             <div class="profile-header">
+          <h2 class="header">
+            Personal details & Address
+          </h2>
+        </div>
+            <br>
+        <div class class="profile-address details">
+          <div class="panel panel-default data-publisher">
+            <div class="span4">
+              <table class="table" ng-repeat="item in data.result">
+                <tbody>
+                  <tr>
+                    <td><b>Name</b></td>
+                    <td>{{item.first_name}} {{item.last_name}}</td>
+                     <td><b>OHR</b></td>
+                    <td>{{item.ohr_id}}</td>
+                  </tr>
+                   <tr>
+                     <td><b>Department</b></td>
+                    <td>{{item.department}}</td>
+                     <td><b>Band</b></td>
+                    <td>{{item.u_band}}</td>
+                  </tr>
+                   <tr>
+                     <td><b>Address</b></td>
+                    <td>{{item.location}}</td>
+                     <td><b>Email</b></td>
+                    <td>{{item.email}}</td>
+                  </tr>
+                   <tr>
+                     <td><b>Phone</b></td>
+                    <td>{{item.mobile}}</td>
+                     <td><b>City</b></td>
+                    <td>{{item.city}}</td>
+                  </tr>
+                </tbody>
+              </table>
+           </div>
+          </div>
+        </div>
+         <div class="profile-header">
+          <h2 class="header">
+           Sold Items
+          </h2>
+        </div>
+          <br>
+        <div class="col-md-12" style="margin-bottom:70px;">
+         <div class="col-md-3" style="display:flex;justify-content:space-between;cursor:pointer;" ng-if="data.publishedItem.length>0"  ng-repeat="item in data.publishedItem">
+    <div class="owl-item active shadow-sm p-3" style="width: 228px;height:399px;padding:2rem;margin-top:17px;cursor;pointer;background-color:white;">
+      <div class="items">
+							<div class="grmProductCard">
+								<div class="gridItem">
+				
+									<div class="gridItemInner">
+										<div class="gridItemImage">
+											
+											<a class="gridItemLink"  style="cursor:pointer;" target="_blank">
+													<img class="merchItem" ng-click="enlargeImg(this)" onerror="this.onerror=null;this.srcset='';this.src='https://s7d4.scene7.com/is/image/BIworldwide/no-image-product-card?$GRMProductCard$&amp;fmt=png';" src="https://genpactdevelop.service-now.com/sys_attachment.do?sys_id={{item.itemImage}}">
+											</a>
+                      	<!--<a class="gridItemLink"  style="cursor:pointer;" target="_blank"  ng-click="c.showImages(item.itemsysId)">
+                         Show More.
+											</a>-->
+										</div>
+										<div class="merchInfo" style="height: 127px;">
+											<a class="gridItemLink">
+												<a class="description" data-toggle="tooltip" data-placement="bottom" title="" href="/esgs_fashion?id=esg_published_item_detail&sys_id={{item.itemsysId}}" target="blank">{{item.itemname}}</a>
+													<!--<p class="price">
+														<span class="actualPrice">{{item.itemprice}}</span>
+														<span class="mediaName">Points</span>
+													</p>-->
+                        	<p class="price">
+                             <span class="mediaName"><b>Size:&nbsp;</b></span>
+														<span class="size">{{item.size}}</span>
+													</p>
+                         <p class="price">
+                           	<span class="mediaName"><b>Color:&nbsp;</b></span>
+														<span class="size">{{item.color}}</span>
+													</p>
+                         <p class="price">
+                           	<span class="mediaName"><b>Suitable for:&nbsp;</b></span>
+														<span class="size">{{item.gender}}</span>
+													</p>
+												<p class="productId">
+                          <span><b>Product ID</b>: {{item.prodId}}</span>
+												</p>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+          </div></div>
+    
+    
+  </div>     
+        </div>
+        <div class="col-md-12" ng-if="data.publishedItem.length==0">
+          <div class="panel panel-default">
+            <h3 style="text-align:center;color:skyblue;">
+              No data available
+            </h3>
+          </div>
+        </div>
+         <div class="profile-header" style="margin-bottom:70px;">
+          <h2 class="header">
+            Brought Items
+          </h2>
+        </div>
+        <br>
+         <div class="col-md-12" style="margin-bottom:100px;"  ng-if="data.broughtitem.length>0">
+         <div class="col-md-3" style="display:flex;justify-content:space-between;cursor:pointer;"  ng-repeat="item1 in data.broughtitem">
+    <div class="owl-item active shadow-sm p-3" style="width: 228px;height:399px;padding:2rem;margin-top:17px;cursor;pointer;background-color:white;">
+      <div class="items">
+							<div class="grmProductCard">
+								<div class="gridItem">
+				
+									<div class="gridItemInner">
+										<div class="gridItemImage">
+											
+											<a class="gridItemLink"  style="cursor:pointer;" target="_blank">
+													<img class="merchItem" ng-click="enlargeImg(this)" onerror="this.onerror=null;this.srcset='';this.src='https://s7d4.scene7.com/is/image/BIworldwide/no-image-product-card?$GRMProductCard$&amp;fmt=png';" src="https://genpactdevelop.service-now.com/sys_attachment.do?sys_id={{item1.itemImage}}">
+											</a>
+                      	<!--<a class="gridItemLink"  style="cursor:pointer;" target="_blank"  ng-click="c.showImages(item1.itemsysId)">
+                         Show More.
+											</a>-->
+										</div>
+										<div class="merchInfo" style="height: 127px;">
+											<a class="gridItemLink">
+												<a class="description" data-toggle="tooltip" data-placement="bottom" title="" href="/esgs_fashion?id=esg_published_item_detail&sys_id={{item.itemsysId}}" target="blank">{{item1.itemname}}</a>
+													<!--<p class="price">
+														<span class="actualPrice">{{item.itemprice}}</span>
+														<span class="mediaName">Points</span>
+													</p>-->
+                        	<p class="price">
+                             <span class="mediaName"><b>Size:&nbsp;</b></span>
+														<span class="size">{{item1.size}}</span>
+													</p>
+                         <p class="price">
+                           	<span class="mediaName"><b>Color:&nbsp;</b></span>
+														<span class="size">{{item1.color}}</span>
+													</p>
+                         <p class="price">
+                           	<span class="mediaName"><b>Suitable for:&nbsp;</b></span>
+														<span class="size">{{item1.gender}}</span>
+													</p>
+												<p class="productId">
+                          <span><b>Product ID</b>: {{item1.prodId}}</span>
+												</p>
+                        <button class="btn btn-danger" ng-click="c.soldItem(item1.itemsysId)">Sold&nbsp;<i class='fa fa-dollar'></i></button>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+          </div></div>
+    
+    
+  </div>     
+        </div>
+         <div class="col-md-12" ng-if="data.broughtitem.length==0">
+          <div class="panel panel-default">
+            <h2 style="text-align:center;color:skyblue;">
+              No data available
+            </h2>
+          </div>
+        </div>
+           <div class="profile-header">
+          <h2 class="header">
+           Product Rating and Feedbacks
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>]]></template>
+    </sp_widget>
+</record_update>

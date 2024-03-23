@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.greyish-label{
+  font-size:14px;
+  color:#808080;
+  margin-bottom:20px;
+}
+.label-black-value{ 
+  color:black;
+   font-size:14px;
+    margin-bottom:20px;
+}
+
+.panel-default{
+ box-shadow:0 0.4rem 0.8rem 0 grey;
+  width:110rem;
+  border-radius:0.7rem;
+  margin-top:-6px;
+  margin-bottom:20px;}
+
+
+@media (min-width: 320px) and (max-width: 375px){
+  .panel-default{width: 36rem !important;
+    margin-left: -51px;margin-top:5px !important;}
+  .greyish-label{font-size:11px;}
+    .label-black-value{margin-left: -29px;}
+}
+
+@media (min-width: 376px) and (max-width: 767px){
+ .panel-default{width: 36rem !important;
+    margin-left: -47px;margin-top:4px !important;}
+   .greyish-label{font-size:11px;}
+    .label-black-value{margin-left: -29px;}
+}
+@media (min-width: 768px) and (max-width: 820px){
+ .panel-default{width: 36rem !important;
+    margin-left: -31px;margin-top:4px !important;}
+   .greyish-label{font-size:11px;}
+  .label-black-value{margin-left: -29px;}
+}
+.backbutton {
+    background-color: #FF555F;
+    color: #FFF;
+    border: 0.1rem solid #FF555F;
+    margin: 0.9rem;
+    margin-bottom: -2rem;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>ESG Publisher Profile View Widget</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>ESG Publisher Profile View Widget</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	data.result=[];
+	var itemid=$sp.getParameter('itemId');
+	console.log(itemid);
+	var foundItem=new GlideRecord('x_ggisu_esg_sustan_esg_sustanable_fashion_publisher');
+	foundItem.addEncodedQuery('sys_id='+itemid);
+	foundItem.query();
+	if(foundItem.next()){
+			var gr=new GlideRecord('sys_user');
+	gr.addEncodedQuery('user_name='+foundItem.sys_created_by);
+	gr.query();
+	if(gr.next()){
+		var obj={};
+		obj.ohr_id=gr.getValue('user_name');
+		obj.first_name=gr.getValue('first_name');
+		obj.last_name=gr.getValue('last_name');
+		obj.location=gr.getDisplayValue('location');
+		obj.u_center_of_excellence=gr.getValue('u_coe');
+		obj.u_service_delivery_organization=gr.getValue('u_sdo');
+		obj.u_band=gr.getValue('u_band');
+		obj.u_supervisor=gr.getDisplayValue('manager');
+		obj.title=gr.getDisplayValue('title');
+		obj.city=gr.getDisplayValue('city');
+		obj.email=gr.getValue('email');
+		obj.mobile=gr.getValue('mobile_phone');
+		obj.u_band=gr.getValue('u_band');
+		obj.u_hr_manager=gr.getDisplayValue('u_hr_manager');
+		obj.company=gr.getValue('company');
+		obj.department=gr.getDisplayValue('department');
+		obj.u_legal_entity=gr.getValue('u_legal_entity');
+		data.result.push(obj);
+	}
+	console.log(data.result);
+	}
+
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>703318399</sys_created_by>
+        <sys_created_on>2024-02-16 15:32:23</sys_created_on>
+        <sys_id>b7faef0b97dcced06ca8f0c6f053af12</sys_id>
+        <sys_mod_count>27</sys_mod_count>
+        <sys_name>ESG Publisher Profile View Widget</sys_name>
+        <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
+        <sys_update_name>sp_widget_b7faef0b97dcced06ca8f0c6f053af12</sys_update_name>
+        <sys_updated_by>703318399</sys_updated_by>
+        <sys_updated_on>2024-02-17 07:46:29</sys_updated_on>
+        <template><![CDATA[<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div style="float:left;">
+     <a class="btn btn-primary backbutton" href="/esgs_fashion?id=esg_fashions_buyers"><i class="fa fa-arrow-left" style="color:white;"></i>&nbsp;Back</a>
+  </div>
+  <div class="col-md-12" style="margin-top: 4rem;margin-bottom: 4rem;">
+    <div class="panel panel-default" style="box-shadow:0 0.4rem 0.8rem 0 grey;width:110rem;border-radius:0.7rem;margin-top:-6px;margin-bottom:20px;">
+    <div class="panel-heading" style="background-color:skyblue; !important;padding:3px">
+      <h3 class="text-center" style="font-family:sans-serif;font-weight:700;"><strong><b> Item Publisher Detail</b></strong></h3>
+    </div>
+    <div class="panel-body bg-white">
+      <div class="row" ng-repeat="details in c.data.result">
+        <div class="col-md-3 col-xs-6 col-sm-6">
+         <div>
+          <label class="greyish-label">OHR ID</label>
+        </div>
+        <div>
+          <label class="greyish-label">First Name</label>
+        </div>
+        <div>
+          <label class="greyish-label">Last Name</label>
+        </div>
+        <div>
+          <label class="greyish-label">Location</label>
+           
+        </div>
+          <div>
+          <label class="greyish-label">Band</label>
+              
+        </div>
+          <div>
+          <label class="greyish-label">Supervisor</label>
+        </div>
+          <div>
+          <label class="greyish-label">Supervisor OHR</label>
+        </div>
+          <div>
+          <label class="greyish-label">HR Name</label>
+        </div>
+          <div>
+          <label class="greyish-label">HR OHR</label>
+        </div>
+          
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <div>
+           <label class="label-black-value">{{details.ohr_id ?details.ohr_id : '-'}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.first_name}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.last_name ?details.last_name : '-'}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.location}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.u_band}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.u_supervisor}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.u_supervisor_ohr}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.u_hr_manager}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.u_hr_ohr}}</label>
+          </div>
+        </div>
+        <div class="col-md-3 col-xs-6 col-sm-6">
+          <div>
+          <label class="greyish-label">Personal Email ID</label>
+        </div>
+          <div>
+          <label class="greyish-label">City</label>
+        </div>
+          <div>
+          <label class="greyish-label">Designation</label>
+        </div>
+          <div>
+          <label class="greyish-label">Address</label>
+        </div>
+          <div>
+          <label class="greyish-label">Legal Entity</label>
+        </div>
+          <div>
+          <label class="greyish-label">Department</label>
+        </div>
+           <div>
+          <label class="greyish-label">Mobile Phone</label>
+        </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <div>
+           <label class="label-black-value">{{details.email}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.city}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.title}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.u_address}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.u_legal_entity}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.department}}</label>
+          </div>
+          <div>
+           <label class="label-black-value">{{details.mobile}}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>   
+  </div> 
+</body>
+</html>]]></template>
+    </sp_widget>
+</record_update>

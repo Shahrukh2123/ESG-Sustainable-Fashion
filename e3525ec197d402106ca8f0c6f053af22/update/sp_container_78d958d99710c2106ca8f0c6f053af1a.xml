@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="INSERT_OR_UPDATE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>ESG Fashion Publish Item - Container 2</name>
+        <order>2</order>
+        <semantic_tag/>
+        <sp_page display_value="esg_fashion_publish_item">e0e10811979882106ca8f0c6f053af97</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>703318399</sys_created_by>
+        <sys_created_on>2024-02-10 13:48:37</sys_created_on>
+        <sys_id>78d958d99710c2106ca8f0c6f053af1a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ESG Fashion Publish Item - Container 2</sys_name>
+        <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
+        <sys_update_name>sp_container_78d958d99710c2106ca8f0c6f053af1a</sys_update_name>
+        <sys_updated_by>703318399</sys_updated_by>
+        <sys_updated_on>2024-02-10 13:48:37</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+</record_update>

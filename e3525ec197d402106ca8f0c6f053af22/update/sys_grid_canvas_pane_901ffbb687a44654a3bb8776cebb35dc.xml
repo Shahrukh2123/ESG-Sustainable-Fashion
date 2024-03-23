@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas_pane">
+    <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+        <grid_canvas display_value="PA ESG Sustainable Fash - New Tab">caddd73e8764c254a3bb8776cebb3580</grid_canvas>
+        <height>9</height>
+        <portal_widget display_value="Created 2024-02-28 02:06:46 PM">501ffbb687a44654a3bb8776cebb35d9</portal_widget>
+        <posx>0</posx>
+        <posy>9</posy>
+        <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+        <sys_created_by>703318399</sys_created_by>
+        <sys_created_on>2024-02-28 08:36:46</sys_created_on>
+        <sys_id>901ffbb687a44654a3bb8776cebb35dc</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>caddd73e8764c254a3bb8776cebb3580</sys_name>
+        <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
+        <sys_update_name>sys_grid_canvas_pane_901ffbb687a44654a3bb8776cebb35dc</sys_update_name>
+        <sys_updated_by>703318399</sys_updated_by>
+        <sys_updated_on>2024-02-28 08:43:39</sys_updated_on>
+        <width>5</width>
+    </sys_grid_canvas_pane>
+</record_update>

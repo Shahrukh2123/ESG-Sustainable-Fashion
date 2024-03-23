@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
+    <sp_page action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <css>section.page{&#13;
+  background-image:url('/x_ggisu_esg_sustan.bg_images.png');&#13;
+  background-repeat:no-repeat;&#13;
+  background-size:cover;&#13;
+}</css>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <human_readable_url_structure/>
+        <id>esg_published_item_detail</id>
+        <internal>false</internal>
+        <omit_watcher>false</omit_watcher>
+        <public>false</public>
+        <roles/>
+        <seo_script/>
+        <short_description/>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>703318399</sys_created_by>
+        <sys_created_on>2024-02-15 06:26:45</sys_created_on>
+        <sys_id>d01460be87904a906c60a9383cbb35f0</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>esg_published_item_detail</sys_name>
+        <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
+        <sys_update_name>sp_page_d01460be87904a906c60a9383cbb35f0</sys_update_name>
+        <sys_updated_by>703318399</sys_updated_by>
+        <sys_updated_on>2024-02-24 07:25:56</sys_updated_on>
+        <title>ESG Published Item detail</title>
+        <use_seo_script>false</use_seo_script>
+    </sp_page>
+    <sys_translated_text action="delete_multiple" query="documentkey=d01460be87904a906c60a9383cbb35f0"/>
+</record_update>

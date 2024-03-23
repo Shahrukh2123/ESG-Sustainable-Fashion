@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="pa_dashboards_permissions">
+    <pa_dashboards_permissions action="INSERT_OR_UPDATE">
+        <dashboard display_value="ESG Sustainable Fashion Admin Dashboard">ccbd573e8764c254a3bb8776cebb3530</dashboard>
+        <delete>false</delete>
+        <group display_value="ESG Sustanable Fashion Admin Group" name="ESG Sustanable Fashion Admin Group">b87e5bfe8764c254a3bb8776cebb3567</group>
+        <identity>b87e5bfe8764c254a3bb8776cebb3567</identity>
+        <read>true</read>
+        <role/>
+        <sys_class_name>pa_dashboards_permissions</sys_class_name>
+        <sys_created_by>703318399</sys_created_by>
+        <sys_created_on>2024-02-28 09:32:42</sys_created_on>
+        <sys_id>efdb404387a08654a3bb8776cebb354c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>b87e5bfe8764c254a3bb8776cebb3567</sys_name>
+        <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
+        <sys_update_name>pa_dashboards_permissions_efdb404387a08654a3bb8776cebb354c</sys_update_name>
+        <sys_updated_by>703318399</sys_updated_by>
+        <sys_updated_on>2024-02-28 09:32:42</sys_updated_on>
+        <type>2</type>
+        <user/>
+        <write>false</write>
+    </pa_dashboards_permissions>
+</record_update>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="pa_dashboards_group">
+    <pa_dashboards_group action="INSERT_OR_UPDATE">
+        <groups/>
+        <name>ESG Sustanable Admin group</name>
+        <order>100</order>
+        <role_override>true</role_override>
+        <roles>x_ggisu_esg_sustan.ESG Fashion admin users</roles>
+        <sys_class_name>pa_dashboards_group</sys_class_name>
+        <sys_created_by>703318399</sys_created_by>
+        <sys_created_on>2024-02-28 06:21:58</sys_created_on>
+        <sys_id>71ef17b687a4c254a3bb8776cebb358d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>ESG Sustanable Admin group</sys_name>
+        <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
+        <sys_update_name>pa_dashboards_group_71ef17b687a4c254a3bb8776cebb358d</sys_update_name>
+        <sys_updated_by>703318399</sys_updated_by>
+        <sys_updated_on>2024-02-28 09:28:57</sys_updated_on>
+        <users/>
+        <visible_to>2</visible_to>
+    </pa_dashboards_group>
+</record_update>

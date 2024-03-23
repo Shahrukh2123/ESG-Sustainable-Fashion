@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher">x_ggisu_esg_sustan_esg_sustanable_fashion_publisher</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>ESGP</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>703318399</sys_created_by>
+        <sys_created_on>2024-02-10 04:25:39</sys_created_on>
+        <sys_id>1ef85e89975802106ca8f0c6f053af3a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ESGP</sys_name>
+        <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
+        <sys_update_name>sys_number_1ef85e89975802106ca8f0c6f053af3a</sys_update_name>
+        <sys_updated_by>703318399</sys_updated_by>
+        <sys_updated_on>2024-02-10 04:25:39</sys_updated_on>
+    </sys_number>
+</record_update>
