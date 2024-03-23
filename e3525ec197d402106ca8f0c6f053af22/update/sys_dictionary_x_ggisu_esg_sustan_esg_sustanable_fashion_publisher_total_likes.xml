@@ -2,7 +2,7 @@
     <sys_dictionary action="INSERT_OR_UPDATE" element="total_likes" table="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher">
         <active>true</active>
         <array>false</array>
-        <attributes/>
+        <attributes>edge_encryption_enabled=true</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -52,7 +52,6 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>703318399</sys_created_by>
         <sys_created_on>2024-02-28 12:46:02</sys_created_on>
-        <sys_id>87d7b88b8764c654a3bb8776cebb35e9</sys_id>
         <sys_name>Total Likes</sys_name>
         <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
         <sys_policy/>

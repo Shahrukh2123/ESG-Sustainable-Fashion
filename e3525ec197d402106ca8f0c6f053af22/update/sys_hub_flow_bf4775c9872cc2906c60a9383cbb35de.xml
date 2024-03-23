@@ -5,12 +5,15 @@
         <active>false</active>
         <annotation/>
         <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
         <compiler_build/>
         <copied_from/>
         <copied_from_name/>
         <description>ESG Sustainable Item GenAI flow</description>
+        <flow_priority/>
+        <generation_source/>
         <internal_name>esg_sustanable_item_genai_flow</internal_name>
         <label_cache>[{"name":"Created or Updated_1.current.item_name","label":"Trigger - Record Created or Updated➛ESG Sustanable Fashion Sold Item Record➛Item Name","reference":"","reference_display":"Item Name","type":"string","base_type":"string","parent_table_name":"x_ggisu_esg_sustan_esg_sustanable_fashion_publisher","column_name":"item_name"},{"name":"Created or Updated_1.current.item_color","label":"Trigger - Record Created or Updated➛ESG Sustanable Fashion Sold Item Record➛Item Color","reference":"","reference_display":"Item Color","type":"string","base_type":"string","parent_table_name":"x_ggisu_esg_sustan_esg_sustanable_fashion_publisher","column_name":"item_color"},{"name":"Created or Updated_1.current.item_type","label":"Trigger - Record Created or Updated➛ESG Sustanable Fashion Sold Item Record➛Item Type","reference":"","reference_display":"Item Type","type":"choice","base_type":"choice","parent_table_name":"x_ggisu_esg_sustan_esg_sustanable_fashion_publisher","column_name":"item_type","choices":[{"label":"-- None --","used":false,"image":"","reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"value":""},{"used":false,"label":"Accessories","image":"","reference":false,"rawLabel":"Accessories","selected":false,"missing":false,"value":"5","parameters":{"name":"x_ggisu_esg_sustan_esg_sustanable_fashion_publisher"}},{"used":false,"label":"Bags","image":"","reference":false,"rawLabel":"Bags","selected":false,"missing":false,"value":"2","parameters":{"name":"x_ggisu_esg_sustan_esg_sustanable_fashion_publisher"}},{"used":false,"label":"Clothing","image":"","reference":false,"rawLabel":"Clothing","selected":false,"missing":false,"value":"1","parameters":{"name":"x_ggisu_esg_sustan_esg_sustanable_fashion_publisher"}},{"used":false,"label":"Footwear","image":"","reference":false,"rawLabel":"Footwear","selected":false,"missing":false,"value":"3","parameters":{"name":"x_ggisu_esg_sustan_esg_sustanable_fashion_publisher"}},{"used":false,"label":"Jewellery","image":"","reference":false,"rawLabel":"Jewellery","selected":false,"missing":false,"value":"4","parameters":{"name":"x_ggisu_esg_sustan_esg_sustanable_fashion_publisher"}}]},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛ESG Sustanable Fashion Sold Item Record","reference":"x_ggisu_esg_sustan_esg_sustanable_fashion_publisher","reference_display":"ESG Sustanable Fashion Sold Item","type":"reference","base_type":"reference","attributes":{}},{"name":"28098d93-5e71-416f-a61a-12a5ec7757b7.response","label":"1 - Generic Prompt➛response","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"7ace8998-d367-4871-becc-d6ae9c315c03"}}]</label_cache>
         <latest_snapshot/>
@@ -123,6 +126,29 @@
     </sys_flow_cat_variable_model>
     <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=3f4775c9872cc2906c60a9383cbb35df"/>
     <sys_hub_flow_input action="delete_multiple" query="model=bf4775c9872cc2906c60a9383cbb35de^sys_idNOT IN0391c34d876846906c60a9383cbb35a3,8391c34d876846906c60a9383cbb3591,8b91c34d876846906c60a9383cbb35a6"/>
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDCollection</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>global</scope_name>
+        <serialized_content>{"FlowDesigner:FDCollection":{"$COCollectionField":[{"FDChangeDetails":{"previous_display_value":"String","previous_display_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Previous Display Value\",\"mandatory\":\"false\",\"order\":\"4\",\"max_length\":\"0\"}"},"previous_value":"String","previous_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Previous Value\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"0\"}"},"current_display_value":"String","current_display_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Current Display Value\",\"mandatory\":\"false\",\"order\":\"5\",\"max_length\":\"0\"}"},"current_value":"String","current_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Current Value\",\"mandatory\":\"false\",\"order\":\"3\",\"max_length\":\"0\"}"},"field_name":"String","field_name.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Field Name\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"pwd2droppable\":\"true\",\"default_value\":\"\",\"label\":\"Changed Fields\",\"mandatory\":\"false\",\"child_name\":\"FDChangeDetails\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDCollection\",\"child_label\":\"FDChangeDetails\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"100\",\"max_length\":\"4000\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDCollection.$type_facets":{"SimpleMapFacet":"{\"pwd2droppable\":\"true\",\"default_value\":\"\",\"label\":\"Changed Fields\",\"mandatory\":\"false\",\"child_name\":\"FDChangeDetails\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDCollection\",\"child_label\":\"FDChangeDetails\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"100\",\"max_length\":\"4000\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-13 23:19:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path/>
+        <sys_id>f4f014150f023300ecf0cc52ff767eed</sys_id>
+        <sys_mod_count>101</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Flow Designer Designer Model" source="com.glide.hub.designer_backend.model">e0523d5e8df0021087de63ac7f1f008c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-28 05:06:11</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
     <sys_hub_flow_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -388,6 +414,7 @@
         <compiled_snapshot/>
         <display_text/>
         <flow display_value="ESG Sustanable Item GenAI flow">bf4775c9872cc2906c60a9383cbb35de</flow>
+        <generation_source/>
         <order>2</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -463,6 +490,7 @@
         <compiled_snapshot/>
         <display_text/>
         <flow display_value="ESG Sustanable Item GenAI flow">bf4775c9872cc2906c60a9383cbb35de</flow>
+        <generation_source/>
         <order>1</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -496,11 +524,11 @@
         <sys_created_on>2024-02-22 17:38:54</sys_created_on>
         <sys_id>0391c34d876846906c60a9383cbb35a9</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Table Name</sys_name>
         <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
         <sys_policy/>
         <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_bf4775c9872cc2906c60a9383cbb35de_table_name_en</sys_update_name>
         <sys_updated_by>703318399</sys_updated_by>
         <sys_updated_on>2024-02-22 17:38:54</sys_updated_on>
         <url/>
@@ -519,11 +547,11 @@
         <sys_created_on>2024-02-22 17:38:54</sys_created_on>
         <sys_id>8791c34d876846906c60a9383cbb3595</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Record</sys_name>
         <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
         <sys_policy/>
         <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_bf4775c9872cc2906c60a9383cbb35de_current_en</sys_update_name>
         <sys_updated_by>703318399</sys_updated_by>
         <sys_updated_on>2024-02-22 17:38:54</sys_updated_on>
         <url/>
@@ -542,11 +570,11 @@
         <sys_created_on>2024-02-22 17:38:54</sys_created_on>
         <sys_id>cb91c34d876846906c60a9383cbb35a5</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Changed Fields</sys_name>
         <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
         <sys_policy/>
         <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_bf4775c9872cc2906c60a9383cbb35de_changed_fields_en</sys_update_name>
         <sys_updated_by>703318399</sys_updated_by>
         <sys_updated_on>2024-02-22 17:38:54</sys_updated_on>
         <url/>

@@ -3,7 +3,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>number</element>
-            <list_id display_value="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" element="NULL" name="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" parent="NULL" relationship="NULL" sys_domain="global" view="a0b1420f87e882106c60a9383cbb35e0">b9f14e4f87e882106c60a9383cbb35c8</list_id>
+            <list_id display_value="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" element="NULL" name="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" parent="NULL" relationship="NULL" sys_domain="global" view="5e05043e83490210bbeb31b6feaad3a1">b9f14e4f87e882106c60a9383cbb35c8</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -18,7 +18,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>item_name</element>
-            <list_id display_value="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" element="NULL" name="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" parent="NULL" relationship="NULL" sys_domain="global" view="a0b1420f87e882106c60a9383cbb35e0">b9f14e4f87e882106c60a9383cbb35c8</list_id>
+            <list_id display_value="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" element="NULL" name="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" parent="NULL" relationship="NULL" sys_domain="global" view="5e05043e83490210bbeb31b6feaad3a1">b9f14e4f87e882106c60a9383cbb35c8</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
@@ -33,7 +33,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>item_type</element>
-            <list_id display_value="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" element="NULL" name="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" parent="NULL" relationship="NULL" sys_domain="global" view="a0b1420f87e882106c60a9383cbb35e0">b9f14e4f87e882106c60a9383cbb35c8</list_id>
+            <list_id display_value="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" element="NULL" name="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" parent="NULL" relationship="NULL" sys_domain="global" view="5e05043e83490210bbeb31b6feaad3a1">b9f14e4f87e882106c60a9383cbb35c8</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
@@ -48,7 +48,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>comments</element>
-            <list_id display_value="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" element="NULL" name="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" parent="NULL" relationship="NULL" sys_domain="global" view="a0b1420f87e882106c60a9383cbb35e0">b9f14e4f87e882106c60a9383cbb35c8</list_id>
+            <list_id display_value="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" element="NULL" name="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" parent="NULL" relationship="NULL" sys_domain="global" view="5e05043e83490210bbeb31b6feaad3a1">b9f14e4f87e882106c60a9383cbb35c8</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
@@ -63,7 +63,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>total_likes</element>
-            <list_id display_value="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" element="NULL" name="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" parent="NULL" relationship="NULL" sys_domain="global" view="a0b1420f87e882106c60a9383cbb35e0">b9f14e4f87e882106c60a9383cbb35c8</list_id>
+            <list_id display_value="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" element="NULL" name="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" parent="NULL" relationship="NULL" sys_domain="global" view="5e05043e83490210bbeb31b6feaad3a1">b9f14e4f87e882106c60a9383cbb35c8</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
@@ -100,7 +100,7 @@
             <sys_updated_by>703318399</sys_updated_by>
             <sys_updated_on>2024-02-28 18:08:40</sys_updated_on>
             <sys_user/>
-            <view display_value="Rptafc0020f87a882106c60a9383cbb3575" name="RPTafc0020f87a882106c60a9383cbb3575">a0b1420f87e882106c60a9383cbb35e0</view>
+            <view display_value="Rptafc0020f87a882106c60a9383cbb3575" name="RPTafc0020f87a882106c60a9383cbb3575">5e05043e83490210bbeb31b6feaad3a1</view>
             <view_name/>
         </sys_ui_list>
     </sys_ui_list>

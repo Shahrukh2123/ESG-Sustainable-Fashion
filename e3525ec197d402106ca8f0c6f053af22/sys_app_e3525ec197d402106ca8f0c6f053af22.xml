@@ -16,6 +16,7 @@
         <logo/>
         <menu/>
         <name>ESG Sustanable Fashion</name>
+        <package_json/>
         <private>false</private>
         <restrict_table_access>false</restrict_table_access>
         <runtime_access_tracking>permissive</runtime_access_tracking>
@@ -42,4 +43,5 @@
         <vendor_prefix/>
         <version>1.0.1</version>
     </sys_app>
+    <sys_translated_text action="delete_multiple" query="documentkey=e3525ec197d402106ca8f0c6f053af22"/>
 </record_update>

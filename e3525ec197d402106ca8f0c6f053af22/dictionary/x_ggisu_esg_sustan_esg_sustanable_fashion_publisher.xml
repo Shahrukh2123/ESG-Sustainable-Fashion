@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="44f85e89975802106ca8f0c6f053af03" label="ESG Sustanable Fashion Sold Item" max_length="40" name="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" type="collection">
+        <element label="Additional Details" max_length="1000" name="additional_details" type="string"/>
+        <element active="false" attributes="edge_encryption_enabled=true" label="Cheers Points" max_length="40" name="cheers_points" type="integer"/>
+        <element label="Comments" max_length="1000" name="comments" type="journal"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" display="true" label="Gender" max_length="100" name="gender" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Female" value="Female"/>
+                <element inactive_on_update="false" label="Male" value="Male"/>
+                <element inactive_on_update="false" label="UniSex" value="UniSex"/>
+            </choice>
+        </element>
+        <element label="Item Color" max_length="100" name="item_color" type="string"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Item Image" max_length="32" name="item_image" reference="sys_attachment" reference_qual="table_name=x_ggisu_esg_sustan_esg_sustanable_fashion_publisher^EQ" reference_qual_condition="table_name=x_ggisu_esg_sustan_esg_sustanable_fashion_publisher^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Item Image 2" max_length="32" name="item_image_2" reference="sys_attachment" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Item Image 3" max_length="32" name="item_image_3" reference="sys_attachment" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Item Image 4" max_length="32" name="item_image_4" reference="sys_attachment" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Item Image 5" max_length="32" name="item_image_5" reference="sys_attachment" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Item Name" max_length="40" name="item_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Item Price" max_length="40" name="item_price" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Item Quantity" max_length="40" name="item_quantity" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Item Type" mandatory="true" max_length="40" name="item_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Accessories" value="5"/>
+                <element inactive_on_update="false" label="Bags" value="2"/>
+                <element inactive_on_update="false" label="Clothing" value="1"/>
+                <element inactive_on_update="false" label="Footwear" value="3"/>
+                <element inactive_on_update="false" label="Jewellery" value="4"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Publisher Name" max_length="32" name="publisher_name" reference="u_sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Size" max_length="100" name="size" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="US  38" value="US  38"/>
+                <element inactive_on_update="false" label="US 40" value="US 40"/>
+                <element inactive_on_update="false" label="US 42" value="US 42"/>
+                <element inactive_on_update="false" label="US 46" value="US 46"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="State" max_length="40" name="state" type="choice">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="Out of Stock" value="3"/>
+                <element inactive_on_update="false" label="Save as Draft" value="1"/>
+                <element inactive_on_update="false" label="Sold" value="2"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Total Likes" max_length="100" name="total_likes" type="integer"/>
+        <index name="index">
+            <element name="item_image"/>
+        </index>
+        <index name="index2">
+            <element name="item_image_2"/>
+        </index>
+        <index name="index3">
+            <element name="item_image_3"/>
+        </index>
+        <index name="index4">
+            <element name="item_image_4"/>
+        </index>
+        <index name="index5">
+            <element name="item_image_5"/>
+        </index>
+        <index name="index6">
+            <element name="publisher_name"/>
+        </index>
+    </element>
+</database>

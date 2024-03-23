@@ -2,7 +2,7 @@
     <pa_dashboards_permissions action="INSERT_OR_UPDATE">
         <dashboard display_value="ESG Sustainable Fashion Admin Dashboard">ccbd573e8764c254a3bb8776cebb3530</dashboard>
         <delete>false</delete>
-        <group display_value="ESG Sustanable Fashion Admin Group" name="ESG Sustanable Fashion Admin Group">b87e5bfe8764c254a3bb8776cebb3567</group>
+        <group display_value="">b87e5bfe8764c254a3bb8776cebb3567</group>
         <identity>b87e5bfe8764c254a3bb8776cebb3567</identity>
         <read>true</read>
         <role/>

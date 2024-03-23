@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_choice action="INSERT_OR_UPDATE" field="gender" table="x_ggisu_esg_sustan_esg_sustanable_fashion_publisher" version="3">
+    <sys_choice action="INSERT_OR_UPDATE" field="gender" table="x_ggisu_esg_sustan_esg_add_to_cart_bucket_item" version="3">
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>gender</element>
-            <name>x_ggisu_esg_sustan_esg_sustanable_fashion_publisher</name>
+            <name>x_ggisu_esg_sustan_esg_add_to_cart_bucket_item</name>
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>703318399</sys_created_by>
-            <sys_created_on>2024-02-23 06:43:03</sys_created_on>
-            <sys_id>251539119768ce906ca8f0c6f053af89</sys_id>
+            <sys_created_on>2024-02-27 12:23:48</sys_created_on>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>gender</sys_name>
             <sys_package display_value="ESG Sustanable Fashion" source="x_ggisu_esg_sustan">e3525ec197d402106ca8f0c6f053af22</sys_package>
             <sys_policy/>
             <sys_scope display_value="ESG Sustanable Fashion">e3525ec197d402106ca8f0c6f053af22</sys_scope>
-            <sys_update_name>sys_choice_x_ggisu_esg_sustan_esg_sustanable_fashion_publisher_gender</sys_update_name>
+            <sys_update_name>sys_choice_x_ggisu_esg_sustan_esg_add_to_cart_bucket_item_gender</sys_update_name>
             <sys_updated_by>703318399</sys_updated_by>
-            <sys_updated_on>2024-02-23 06:43:03</sys_updated_on>
+            <sys_updated_on>2024-02-27 12:23:48</sys_updated_on>
         </sys_choice_set>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -23,17 +22,16 @@
             <inactive>false</inactive>
             <label>Female</label>
             <language>en</language>
-            <name>x_ggisu_esg_sustan_esg_sustanable_fashion_publisher</name>
+            <name>x_ggisu_esg_sustan_esg_add_to_cart_bucket_item</name>
             <sequence/>
             <synonyms/>
             <sys_created_by>703318399</sys_created_by>
-            <sys_created_on>2024-02-23 06:44:43</sys_created_on>
+            <sys_created_on>2024-02-27 12:23:55</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>c0757dd19768ce906ca8f0c6f053afc5</sys_id>
             <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>703318399</sys_updated_by>
-            <sys_updated_on>2024-02-23 06:44:47</sys_updated_on>
+            <sys_updated_on>2024-02-27 12:24:01</sys_updated_on>
             <value>Female</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -43,17 +41,16 @@
             <inactive>false</inactive>
             <label>Male</label>
             <language>en</language>
-            <name>x_ggisu_esg_sustan_esg_sustanable_fashion_publisher</name>
+            <name>x_ggisu_esg_sustan_esg_add_to_cart_bucket_item</name>
             <sequence/>
             <synonyms/>
             <sys_created_by>703318399</sys_created_by>
-            <sys_created_on>2024-02-23 06:43:03</sys_created_on>
+            <sys_created_on>2024-02-27 12:23:48</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>740535519768ce906ca8f0c6f053af32</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>703318399</sys_updated_by>
-            <sys_updated_on>2024-02-23 06:43:03</sys_updated_on>
+            <sys_updated_on>2024-02-27 12:23:52</sys_updated_on>
             <value>Male</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -63,17 +60,16 @@
             <inactive>false</inactive>
             <label>UniSex</label>
             <language>en</language>
-            <name>x_ggisu_esg_sustan_esg_sustanable_fashion_publisher</name>
+            <name>x_ggisu_esg_sustan_esg_add_to_cart_bucket_item</name>
             <sequence/>
             <synonyms/>
             <sys_created_by>703318399</sys_created_by>
-            <sys_created_on>2024-02-23 06:45:00</sys_created_on>
+            <sys_created_on>2024-02-27 12:24:04</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>0a75b5159768ce906ca8f0c6f053af8b</sys_id>
             <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>703318399</sys_updated_by>
-            <sys_updated_on>2024-02-23 06:45:07</sys_updated_on>
+            <sys_updated_on>2024-02-27 12:24:09</sys_updated_on>
             <value>UniSex</value>
         </sys_choice>
     </sys_choice>

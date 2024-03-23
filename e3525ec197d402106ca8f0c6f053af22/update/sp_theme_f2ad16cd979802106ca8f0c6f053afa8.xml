@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_theme">
     <sp_theme action="INSERT_OR_UPDATE">
         <css_variables/>
-        <footer display_value="Genpact Footer">150ba5368758345076294338cebb3579</footer>
+        <footer display_value="">150ba5368758345076294338cebb3579</footer>
         <footer_fixed>true</footer_fixed>
         <header display_value="ESG Sustanable Fashion Header">024ed60197d802106ca8f0c6f053afeb</header>
         <name>ESG Sustanable Fashion Theme</name>

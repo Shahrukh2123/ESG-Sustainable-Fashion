@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="73b6fc79871c02506c60a9383cbb35d4" label="ESGS Fashion  Publishers Collection" max_length="40" name="x_ggisu_esg_sustan_esgs_fashion_publishers_collection" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Publisher Cheer Points" max_length="40" name="publisher_cheer_points" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Publisher Department" max_length="32" name="publisher_department" reference="cmn_department" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Publisher Name" mandatory="true" max_length="32" name="publisher_name" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="publisher_department"/>
+        </index>
+        <index name="index2">
+            <element name="publisher_name"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="576670be875c4a906c60a9383cbb3579" label="ESG Add to Wishlist Items" max_length="40" name="x_ggisu_esg_sustan_esg_add_to_cart_bucket_item" type="collection">
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Buyer Name" max_length="32" name="buyer_name" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Gender" max_length="100" name="gender" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Female" value="Female"/>
+                <element inactive_on_update="false" label="Male" value="Male"/>
+                <element inactive_on_update="false" label="UniSex" value="UniSex"/>
+            </choice>
+        </element>
+        <element label="Item Color" max_length="200" name="item_color" type="string"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Item Image" max_length="32" name="item_image" reference="sys_attachment" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Item Image3" max_length="32" name="item_image3" reference="sys_attachment" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Item Image 2" max_length="32" name="item_image_2" reference="sys_attachment" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Item Image 4" max_length="32" name="item_image_4" reference="sys_attachment" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Item Image 5" max_length="32" name="item_image_5" reference="sys_attachment" type="reference"/>
+        <element label="Item Name" max_length="100" name="item_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Item Price" max_length="40" name="item_price" type="integer"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Quanitity" max_length="40" name="quanitity" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Size" max_length="100" name="size" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="US 38" value="US 38"/>
+                <element inactive_on_update="false" label="US 40" value="US 40"/>
+                <element inactive_on_update="false" label="US 42" value="US 42"/>
+                <element inactive_on_update="false" label="US 46" value="US 46"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="State" max_length="40" name="state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Bought" value="Bought"/>
+                <element inactive_on_update="false" label="Draft" value="Draft"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Total ItemPrice" max_length="100" name="total_itemprice" type="integer"/>
+        <index name="index">
+            <element name="buyer_name"/>
+        </index>
+        <index name="index2">
+            <element name="item_image"/>
+        </index>
+        <index name="index3">
+            <element name="item_image3"/>
+        </index>
+        <index name="index4">
+            <element name="item_image_2"/>
+        </index>
+        <index name="index5">
+            <element name="item_image_4"/>
+        </index>
+        <index name="index6">
+            <element name="item_image_5"/>
+        </index>
+    </element>
+</database>

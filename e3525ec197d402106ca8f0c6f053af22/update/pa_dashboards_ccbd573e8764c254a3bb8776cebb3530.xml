@@ -10,12 +10,13 @@
         <managed_breakdown/>
         <managed_publisher/>
         <name>ESG Sustainable Fashion Admin Dashboard</name>
+        <no_bulk_migration>false</no_bulk_migration>
         <no_tabs>false</no_tabs>
         <notification_link_label/>
         <notification_link_url/>
         <notification_text/>
         <order>100</order>
-        <owner display_value="Shahrukh Khan">434415f897fd4950e4def0c3f153af3e</owner>
+        <owner display_value="">434415f897fd4950e4def0c3f153af3e</owner>
         <restrict_to_roles/>
         <role_override>true</role_override>
         <roles/>
